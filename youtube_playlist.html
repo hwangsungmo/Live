@@ -7,7 +7,7 @@
     <!-- <title>엄마TV본운동</title> -->
     <style>
         #playlist-container {
-            max-height: 500px;
+            max-height: 300px;
             max-width: 640px;
             overflow-y: auto;
         }
@@ -65,17 +65,10 @@
         var currentVideoIndex = 0;
         var playlist; // Added to store playlist items
 
+
         function onYouTubeIframeAPIReady() {
-            fetchPlaylistItems(null);
-        }
-
-        function fetchPlaylistItems(pageToken) {
-            var apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`;
-            if (pageToken) {
-                apiUrl += `&pageToken=${pageToken}`;
-            }
-
-            fetch(apiUrl)
+            // YouTube Data API를 이용해 동영상 정보 가져오기
+            fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=${playlistId}&key=${apiKey}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -83,54 +76,42 @@
                     return response.json();
                 })
                 .then(data => {
-                    if (!playlist) {
-                        playlist = data.items; // Initialize playlist if not done already
-                    } else {
-                        playlist = playlist.concat(data.items); // Append to existing playlist
-                    }
+                    // 동영상 정보를 사용해 목록 생성
+                    var playlistElement = document.getElementById('playlist');
+                    playlist = data.items; // Store playlist items
 
-                    if (data.nextPageToken) {
-                        fetchPlaylistItems(data.nextPageToken); // Fetch next page if available
-                    } else {
-                        // All items fetched, proceed to create playlist
-                        createPlaylist();
-                    }
-                })
-                .catch(error => console.error('Error fetching playlist:', error));
-        }
-
-        function createPlaylist() {
-            var playlistElement = document.getElementById('playlist');
-
-            playlist.forEach((item, index) => {
-                var videoId = item.snippet.resourceId.videoId;
-                var title = item.snippet.title;
-                var thumbnailUrl = item.snippet.thumbnails.default.url;
+                    playlist.forEach((item, index) => {
+                        var videoId = item.snippet.resourceId.videoId;
+                        var title = item.snippet.title;
+                        var thumbnailUrl = item.snippet.thumbnails.default.url;
 
                         // 목록에 동영상 추가
-                var listItem = document.createElement('li');
-                listItem.innerHTML = `<span>${index + 1}</span><img src="${thumbnailUrl}" alt="${title}"> ${title}`;
-                listItem.onclick = function () {
-                    playVideo(videoId, index, title);
-                };
-                playlistElement.appendChild(listItem);
-            });
+                        var listItem = document.createElement('li');
+                        listItem.innerHTML = `<span>${index + 1}</span><img src="${thumbnailUrl}" alt="${title}"> ${title}`;
+                        listItem.onclick = function () {
+                            playVideo(videoId, index, title);
+                        };
+                        playlistElement.appendChild(listItem);
+                    });
 
                     // YouTube 플레이어 생성
-            player = new YT.Player('player', {
-                height: '390',
-                width: '640',
-                playerVars: {
-                	'autoplay': 1, // 자동 재생 활성화
-                    'controls': 1,
-                    'playlist': playlist.map(item => item.snippet.resourceId.videoId).join(',')
-                },
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
+                    player = new YT.Player('player', {
+                        height: '390',
+                        width: '640',
+                        playerVars: {
+                            'autoplay': 1, // 자동 재생 활성화
+                            'controls': 1,
+                            'playlist': playlist.map(item => item.snippet.resourceId.videoId).join(',')
+                        },
+                        events: {
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
 
-            selectListItem(0);
+                    // 자동으로 첫 번째 동영상 선택
+                    selectListItem(0);
+                })
+                .catch(error => console.error('Error fetching playlist:', error));
         }
 
         // 동영상 목록에서 특정 동영상을 클릭하면 재생
@@ -176,7 +157,6 @@
             var videoTitleElement = document.getElementById('video-title');
             videoTitleElement.innerText = title;
         }
-        
     </script>
 </body>
 
