@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDS best 10</title>
+    <style>
+        #video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            max-width: 640px;
+            /*margin: 0 auto;*//*auto로 하게 되면 상,우,하,좌 인데 상만 마진이 없고 나머지는 동일하다는 의미이므로 중앙배치가 된다. */
+        }
+
+        #player {
+            max-width: 640px;
+            margin-bottom: 20px;
+        }
+
+        #playlist-container {
+            overflow-y: auto;
+            max-height: 300px;
+            width: 640px;
+            /* Match the video width */
+            
+        }
+
+        #videoId {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #videoId li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            
+        }
+
+        #videoId li img {
+            margin-right: 10px;
+            max-width: 100px;
+        }
+
+        #videoId li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #videoId li.selected {
+            background-color: lightgreen;
+        }
+
+        #video-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #008080;
+            max-width: 640px;
+            /* Match the video width */
+        }
+
+        #playlist-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #008080;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="video-container">
+        <div id="player"></div>
+        <div id="playlist-title" class="playlist-title">Loading Playlist...</div>
+        <div id="playlist-container">
+            <ul id="videoId"></ul>
+        </div>
+        <div id="video-title"></div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var videoIds = [
+            'LARFSiFyoYY',
+            'dQS4oHW8qTk',
+            'xhbkOkZDi00',
+            'tBpOdJ_G-sQ',
+            'JLoTTahenKA',
+            'T9wMikE-0o0',
+            'TsCvz4fdpEE',
+            '0b3KOJQzbS0',
+            'gPfG2KBNSXM',
+            'nLNs_XmWOyE'
+        ];
+
+        var playlist = [];
+        var currentVideoIndex = 0;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 1,
+                    'playlist': videoIds.join(',')
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            fetchPlaylistTitles();
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoIndex++;
+                if (currentVideoIndex < playlist.length) {
+                    var nextVideoId = playlist[currentVideoIndex].videoId;
+                    var nextTitle = playlist[currentVideoIndex].title;
+                    playVideo(nextVideoId, currentVideoIndex, nextTitle);
+                }
+            }
+        }
+
+        function playVideo(videoId, index, title) {
+            player.loadVideoById(videoId);
+            player.playVideo();
+            selectListItem(index);
+            updateVideoTitle(title);
+        }
+
+        function selectListItem(index) {
+            var playlistItems = document.querySelectorAll('#videoId li');
+            var selectedItem = playlistItems[index];
+
+            playlistItems.forEach(item => {
+                item.classList.remove('selected');
+            });
+
+            selectedItem.classList.add('selected');
+
+            selectedItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+
+        function updateVideoTitle(title) {
+            var videoTitleElement = document.getElementById('video-title');
+            videoTitleElement.innerText = title;
+        }
+
+        function fetchPlaylistTitles() {
+            var apiKey = 'AIzaSyAkDovAGAdqCIZ1vGt81ZetlMPKOPW8fEI';
+            var videoDetailsUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoIds.join(',')}&key=${apiKey}`;
+
+            fetch(videoDetailsUrl)
+                .then(response => response.json())
+                .then(data => {
+                    playlist = data.items.map(item => ({
+                        videoId: item.id,
+                        title: item.snippet.title
+                    }));
+
+                    populatePlaylist();
+                })
+                .catch(error => {
+                    console.error('Error fetching video details:', error);
+                });
+        }
+
+        function populatePlaylist() {
+            var playlistContainer = document.getElementById('videoId');
+            var playlistTitleElement = document.getElementById('playlist-title');
+
+            playlistTitleElement.innerText = 'KIDS best 10 Playlist'; // Default title
+
+            if (playlist.length > 0) {
+                //playlistTitleElement.innerText = playlist[0].title; // Update the title
+
+                playlist.forEach((item, index) => {
+                    var listItem = document.createElement('li');
+                    listItem.innerHTML = `<span>${index + 1}</span><img src="https://i.ytimg.com/vi/${item.videoId}/default.jpg" alt="${item.title}"> ${item.title}`;
+                    listItem.addEventListener('click', function () {
+                        playVideo(item.videoId, index, item.title);
+                    });
+
+                    playlistContainer.appendChild(listItem);
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
