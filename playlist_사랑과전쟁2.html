@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>사랑과전쟁2</title> -->
+    <style>
+        #playlist-container {
+            max-height: 300px;
+            max-width: 640px;
+            overflow-y: auto;
+        }
+
+        #playlist {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #playlist li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #playlist li img {
+            margin-right: 10px;
+        }
+
+        #playlist li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #playlist li.selected {
+            background-color: lightgreen;
+        }
+
+        #video-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #008080;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="player"></div>
+    <div id="playlist-container">
+        <ul id="playlist"></ul>
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+       // YouTube API 키를 여기에 입력하세요.
+        var apiKey = 'AIzaSyAkDovAGAdqCIZ1vGt81ZetlMPKOPW8fEI';
+       // YouTube API 키를 여기에 입력하세요.
+        var playlistId = 'PLwEpnq7fbKRlLOp2DM5qa387GWW9YZa4U';
+        // 플레이어 생성 및 설정
+        var player;
+        var currentVideoIndex = 0;
+        var playlist; // Added to store playlist items
+
+
+        function onYouTubeIframeAPIReady() {
+            // YouTube Data API를 이용해 동영상 정보 가져오기
+            fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=${playlistId}&key=${apiKey}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 동영상 정보를 사용해 목록 생성
+                    var playlistElement = document.getElementById('playlist');
+                    playlist = data.items; // Store playlist items
+
+                    playlist.forEach((item, index) => {
+                        var videoId = item.snippet.resourceId.videoId;
+                        var title = item.snippet.title;
+                        var thumbnailUrl = item.snippet.thumbnails.default.url;
+
+                        // 목록에 동영상 추가
+                        var listItem = document.createElement('li');
+                        listItem.innerHTML = `<span>${index + 1}</span><img src="${thumbnailUrl}" alt="${title}"> ${title}`;
+                        listItem.onclick = function () {
+                            playVideo(videoId, index, title);
+                        };
+                        playlistElement.appendChild(listItem);
+                    });
+
+                    // YouTube 플레이어 생성
+                    player = new YT.Player('player', {
+                        height: '390',
+                        width: '640',
+                        playerVars: {
+                            'autoplay': 1, // 자동 재생 활성화
+                            'controls': 1,
+                            'playlist': playlist.map(item => item.snippet.resourceId.videoId).join(',')
+                        },
+                        events: {
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+
+                    // 자동으로 첫 번째 동영상 선택
+                    selectListItem(0);
+                })
+                .catch(error => console.error('Error fetching playlist:', error));
+        }
+
+        // 동영상 목록에서 특정 동영상을 클릭하면 재생
+        function playVideo(videoId, index, title) {
+            player.loadVideoById(videoId);
+            player.playVideo();
+            selectListItem(index);
+            updateVideoTitle(title);
+        }
+
+        // 플레이되는 동영상의 해당 리스트 아이템을 선택
+        function selectListItem(index) {
+            var playlistItems = document.querySelectorAll('#playlist li');
+            var selectedItem = playlistItems[index];
+
+            playlistItems.forEach(item => {
+                item.classList.remove('selected');
+            });
+
+            selectedItem.classList.add('selected');
+
+            // Scroll to the selected item
+            selectedItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+
+        // 동영상이 종료되면 다음 동영상으로 넘어갑니다.
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoIndex++;
+                if (currentVideoIndex < playlist.length) {
+                    var nextVideoId = playlist[currentVideoIndex].snippet.resourceId.videoId;
+                    var nextTitle = playlist[currentVideoIndex].snippet.title;
+                    playVideo(nextVideoId, currentVideoIndex, nextTitle);
+                }
+            }
+        }
+
+        // 동영상 제목 업데이트
+        function updateVideoTitle(title) {
+            var videoTitleElement = document.getElementById('video-title');
+            videoTitleElement.innerText = title;
+        }
+    </script>
+</body>
+
+</html>
