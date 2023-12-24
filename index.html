@@ -11,7 +11,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             padding: 20px;
-           /* margin-top: 100px;
+            /* margin-top: 100px;
             margin-left: 500px;
             margin-right: 500px;*/
             align-items: Top;
@@ -57,7 +57,7 @@
             /* max-height: 100px; */
             border-radius: 5px;
         }
-        
+
 
         button.large1 img {
             padding-top: 10px;
@@ -98,6 +98,15 @@
         button.large5 img {
             padding-top: 0px;
             width: 70%;
+            height: auto;
+            /*padding: 25px;*/
+            /* max-height: 100px; */
+            border-radius: 5px;
+        }
+
+        button.large6 img {
+            padding-top: 0px;
+            width: 130%;
             height: auto;
             /*padding: 25px;*/
             /* max-height: 100px; */
@@ -209,9 +218,10 @@
 
     <div class="tvGroup1">
 
-<!-- Cuquin -->
+        <!-- Cuquin -->
         <button class="large5" onclick="loadAnotherHTML1()">
-            <img src="https://yt3.googleusercontent.com/0mFPUt31QLiDVHSW4go0o5GWxi4VGlNf_Ph-qdiiQS2vxKXjQ1aoUJk6TRepJeeVoSAMQ6uwNg=s176-c-k-c0x00ffffff-no-rj" alt="Cuquin Logo">
+            <img src="https://yt3.googleusercontent.com/0mFPUt31QLiDVHSW4go0o5GWxi4VGlNf_Ph-qdiiQS2vxKXjQ1aoUJk6TRepJeeVoSAMQ6uwNg=s176-c-k-c0x00ffffff-no-rj"
+                alt="Cuquin Logo">
             <div class="chInfo">Cuquin</div>
         </button>
 
@@ -222,13 +232,13 @@
             }
         </script>
 
-<!-- 황다윤 -->
+        <!-- 황다윤 -->
         <button class="large5" onclick="loadAnotherHTML2()">
             <img src="황다윤.png" alt="황다윤 Logo">
             <div class="chInfo">황다윤</div>
         </button>
 
-        
+
         <script>
             function loadAnotherHTML2() {
                 // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
@@ -237,33 +247,63 @@
         </script>
 
 
-<!-- taoworld -->
-<button class="large5" onclick="loadAnotherHTML5()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tao.svg/113px-Tao.svg.png" alt="taoworld Logo">
-    <div class="chInfo">taoworld</div>
-</button>
+        <!-- taoworld -->
+        <button class="large5" onclick="loadAnotherHTML5()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Tao.svg/113px-Tao.svg.png"
+                alt="taoworld Logo">
+            <div class="chInfo">taoworld</div>
+        </button>
 
+            <!-- 새 창에서 열림(외부 링크) -->
+        <script>
+            function loadAnotherHTML5() {
+                // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
+                window.open('https://video.taolove.kr/movies/', '_blank');
+            }
+        </script>
 
-<script>
+            <!-- 같은 창에서 열림(외부 링크) -->
+        <!--
+        <script>
+            function loadAnotherHTML5() {
+                // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
+                window.location.href = 'https://video.taolove.kr/movies/';
+            }
+        </script>
+    -->
+
+        <!-- 내가 만든 링크에서 열리게 만듬 -->
+        <!-- <script>
     function loadAnotherHTML5() {
         // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
         window.location.href = 'youtube_single_tao.html';
     }
 </script>
+-->
 
 
-
-<!-- 뽀로로 -->
+        <!-- 뽀로로와 함께해요 -->
         <script>
-            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/NERhHsZg7fs?autoplay=1\',\'_blank\'); return false;"><img src="http://www.pororopark.com/images/sub/circle_pororo.png"alt="뽀로로 Logo"><div class="chInfo">뽀로로</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/q9Hd-mcPDqA?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/E9moNyB_-PTLx9-Fca7qlzWWYfOET0iIA3NSYtZG7cftTn9q3kTvx8n-tOa4SafldUnQbILE=s176-c-k-c0x00ffffff-no-rj"alt="뽀로로1 Logo"><div class="chInfo">뽀로로1</div></button>');
         </script>
 
-<!-- 깨비키즈 -->
+        <!-- 뽀로로 크리스마스 모음집 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/S0TKN6ET7mo?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/E9moNyB_-PTLx9-Fca7qlzWWYfOET0iIA3NSYtZG7cftTn9q3kTvx8n-tOa4SafldUnQbILE=s176-c-k-c0x00ffffff-no-rj"alt="뽀로로2 Logo"><div class="chInfo">뽀로로2</div></button>');
+        </script>
+
+        
+        <!-- 핑크퐁(인기 동요・동화) 실시간 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/fBrmM7AcL-o?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/AIf8zZSgjlQU1IlPkuhXr-LAsF-S4aHoyZX2FJjHx35DwA=s176-c-k-c0x00ffffff-no-rj"alt="핑크퐁 Logo"><div class="chInfo">핑크퐁</div></button>');
+        </script>
+
+        <!-- 깨비키즈 -->
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UCD_-N4vf-tsqbUxrQ4CrJIA&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaQvXCACltJm8zRg18aXKeMw_qLFMmOGV9In-lF3w=s176-c-k-c0x00ffffff-no-rj"alt="깨비키즈 Logo"><div class="chInfo">깨비키즈</div></button>');
         </script>
 
-<!-- Talking Tom -->
+        <!-- Talking Tom -->
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/PlG3doAnQL4?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/s6xRAQnIVE09JESvlo1_CLgLFxGGlzUS1nLscPXwTRNlb9DxX3nRcxwLh61vGY12r04KlLlEug=s176-c-k-c0x00ffffff-no-rj"alt="Talking Tom Logo"><div class="chInfo">Talking Tom</div></button>');
         </script>
@@ -273,18 +313,19 @@
 
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/Rc6xBsiI6y8?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/bZ0voE8l7y0K3CBGcR4t3ARpoTTyqwCWESM5rqbxM1dvzBd22N4PZ-bcizA2bvJ3t-AYrZltwg=s176-c-k-c0x00ffffff-no-rj"alt="불멍 Logo"><div class="chInfo">불멍</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/Rc6xBsiI6y8?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/bZ0voE8l7y0K3CBGcR4t3ARpoTTyqwCWESM5rqbxM1dvzBd22N4PZ-bcizA2bvJ3t-AYrZltwg=s176-c-k-c0x00ffffff-no-rj"alt="불멍 Logo"><div class="chInfo">불멍</div></button>');
         </script>
 
 
-         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/Q8cqUa05v24?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/RRTkPFICEZ6aM-Wb5gDJNi-a3RK7lK6TOenIq_A2URVjkt6WrBMu4a16lsifXq0Lb3xQAFfCLA=s176-c-k-c0x00ffffff-no-rj"alt="휴식음악 Logo"><div class="chInfo">휴식음악</div></button>');
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/Q8cqUa05v24?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/RRTkPFICEZ6aM-Wb5gDJNi-a3RK7lK6TOenIq_A2URVjkt6WrBMu4a16lsifXq0Lb3xQAFfCLA=s176-c-k-c0x00ffffff-no-rj"alt="휴식음악 Logo"><div class="chInfo">휴식음악</div></button>');
         </script>
 
 
-<!-- 엄마TV --> 
+        <!-- 엄마TV -->
         <button class="large5" onclick="loadAnotherHTML()">
-            <img src="https://yt3.googleusercontent.com/ytc/APkrFKZPwvxQ7pxVKgyMlM5jMtG-GExysMLlq91cqUJ2=s176-c-k-c0x00ffffff-no-rj" alt="엄마TV Logo">
+            <img src="https://yt3.googleusercontent.com/ytc/APkrFKZPwvxQ7pxVKgyMlM5jMtG-GExysMLlq91cqUJ2=s176-c-k-c0x00ffffff-no-rj"
+                alt="엄마TV Logo">
             <div class="chInfo">엄마TV</div>
         </button>
 
@@ -297,121 +338,171 @@
 
 
 
-<!-- 사랑과전쟁1 --> 
-<button class="large1" onclick="loadAnotherHTML3()">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtIN2tBg45whWxq0iHOFWTxOouCQH4MRet2LXqQ4h0AOBO7G3u8zDcvZuKM24utEp9QAA&usqp=CAU" alt="사랑과전쟁1 Logo">
-    <div class="chInfo">사랑과전쟁1</div>
-</button>
-
-<script>
-    function loadAnotherHTML3() {
-        // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
-        window.location.href = 'playlist_사랑과전쟁1.html';
-    }
-</script>
-
-<!-- 사랑과전쟁2 --> 
-<button class="large1" onclick="loadAnotherHTML4()">
-    <img src="https://i.namu.wiki/i/M7RXkvylZlj1Ncod1M_JANoz6UgsRL46Le7pK5k5odKve33Inamzh-DTr5mkziVaK-4ReGgUf18KKpnRzggl2A.webp" alt="사랑과전쟁2 Logo">
-    <div class="chInfo">사랑과전쟁2</div>
-</button>
-
-<script>
-    function loadAnotherHTML4() {
-        // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
-        window.location.href = 'playlist_사랑과전쟁2.html';
-    }
-</script>
-
-
+        <!-- 사랑과전쟁1 -->
+        <button class="large1" onclick="loadAnotherHTML3()">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtIN2tBg45whWxq0iHOFWTxOouCQH4MRet2LXqQ4h0AOBO7G3u8zDcvZuKM24utEp9QAA&usqp=CAU"
+                alt="사랑과전쟁1 Logo">
+            <div class="chInfo">사랑과전쟁1</div>
+        </button>
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/JVocS7Yftw8?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/TgL5KUN48UWo9ADJskGN0NEDD7QJRUvyotOQ5_i0X5fitOERE-d4Utvw8LQNSX9yXgKNmeaJZO4=s176-c-k-c0x00ffffff-no-rj"alt="The K-POP Logo"><div class="chInfo">The K-POP</div></button>');
+            function loadAnotherHTML3() {
+                // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
+                window.location.href = 'playlist_사랑과전쟁1.html';
+            }
         </script>
 
+        <!-- 사랑과전쟁2 -->
+        <button class="large1" onclick="loadAnotherHTML4()">
+            <img src="https://i.namu.wiki/i/M7RXkvylZlj1Ncod1M_JANoz6UgsRL46Le7pK5k5odKve33Inamzh-DTr5mkziVaK-4ReGgUf18KKpnRzggl2A.webp"
+                alt="사랑과전쟁2 Logo">
+            <div class="chInfo">사랑과전쟁2</div>
+        </button>
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/jCg2DzrukDo?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/qjY5_GcDN5xdZeI2sLZSSD8eUt-AL2QMsLueHXTNiIMpyddJ0kRWhP5gZrCGsB97EaTDGnSE4Q4=s176-c-k-c0x00ffffff-no-rj"alt="The K-POP2 Logo"><div class="chInfo">The K-POP2</div></button>');
-        </script>
-
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/k2F1XZxPLOA?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/rt1bDWIkFPoQblyNJnQsf1LisM9i88QKRUU-NZu9fmQ0ogyLvUVVUJe1ufaEN0E8DiZk2RgYwg=s176-c-k-c0x00ffffff-no-rj"alt="The ALL THE K-POP Logo"><div class="chInfo">The ALL THE K-POP</div></button>');
+            function loadAnotherHTML4() {
+                // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
+                window.location.href = 'playlist_사랑과전쟁2.html';
+            }
         </script>
 
 
 
-
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/FPVxSch2PCM?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKb5D_B1gPat4_XoSMYmxE253RR0WtrSVGWhtLw6dg=s176-c-k-c0x00ffffff-no-rj"alt="미주미 Logo"><div class="chInfo">미주미</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/JVocS7Yftw8?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/TgL5KUN48UWo9ADJskGN0NEDD7QJRUvyotOQ5_i0X5fitOERE-d4Utvw8LQNSX9yXgKNmeaJZO4=s176-c-k-c0x00ffffff-no-rj"alt="The K-POP Logo"><div class="chInfo">The K-POP</div></button>');
         </script>
 
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/WkUFOMOSSmo?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/anT2TJY_rss5WExUZ8QFW-G4z-3paeISZx5urUY_MRuX7OWNFPgd8tmT0xfJugn6utufJvegJA=s176-c-k-c0x00ffffff-no-rj"alt="삼프로TV Logo"><div class="chInfo">삼프로TV</div></button>');
-        </script>
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/36.php\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/0k2dKvi2CQ_7L1nwFWaz2KIzwAPGovW5mj6AeeCJN4Q-ZQWUUX5TzPQDj_QFTNrKFW1EqMkM834=s176-c-k-c0x00ffffff-no-rj"alt="SBS GOLF Logo"><div class="chInfo">SBS GOLF</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/jCg2DzrukDo?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/qjY5_GcDN5xdZeI2sLZSSD8eUt-AL2QMsLueHXTNiIMpyddJ0kRWhP5gZrCGsB97EaTDGnSE4Q4=s176-c-k-c0x00ffffff-no-rj"alt="The K-POP2 Logo"><div class="chInfo">The K-POP2</div></button>');
         </script>
 
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://1.214.67.103/vod/57801.m3u8?VOD_RequestID=v2M2-0101-1010-7272-5050-000020180717021633;LTE;720P;WIFI\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/UtDi1RSABpoycT8rgXBKHGem_ZZ0A456tvgxavthHmDwzxllCsfqFqdpcFt-3e_eGgdYsu31bQ=s176-c-k-c0x00ffffff-no-rj"alt="스크린골프존 Logo"><div class="chInfo">스크린골프존</div></button>');
-        </script>
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/58.php\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/JTBCGolf%26Sportslogo.png"alt="JTBC 골프&스포츠 Logo"><div class="chInfo">JTBC 골프&스포츠</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/k2F1XZxPLOA?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/rt1bDWIkFPoQblyNJnQsf1LisM9i88QKRUU-NZu9fmQ0ogyLvUVVUJe1ufaEN0E8DiZk2RgYwg=s176-c-k-c0x00ffffff-no-rj"alt="The ALL THE K-POP Logo"><div class="chInfo">The ALL THE K-POP</div></button>');
         </script>
 
 
+
+        <!-- 미국주식에 미치다 -->
+<!--
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://xzx.kr/ann\',\'_blank\'); return false;"><img src="https://www.edgesport.com/static/logo-grey-cf2d7ac74ef032c62a994705daa7af14.svg"alt="EDGEsport Logo"><div class="chInfo">EDGEsport</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/FPVxSch2PCM?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKb5D_B1gPat4_XoSMYmxE253RR0WtrSVGWhtLw6dg=s176-c-k-c0x00ffffff-no-rj"alt="미주미 Logo"><div class="chInfo">미주미</div></button>');
+        </script>
+-->
+        <!-- 미국주식에 미치다 -->
+        <button class="large5" onclick="미주미()">
+            <img src="https://yt3.googleusercontent.com/ytc/APkrFKb5D_B1gPat4_XoSMYmxE253RR0WtrSVGWhtLw6dg=s176-c-k-c0x00ffffff-no-rj"
+                alt="미주미 Logo">
+            <div class="chInfo">미주미</div>
+        </button>
+
+        <script>
+            function 미주미() {
+                // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
+                window.location.href = '미주미.html';
+            }
         </script>
 
 
+
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/61.php\',\'_blank\'); return false;"><img src="https://img.redbull.com/images/w_250/q_auto,f_auto/redbullcom/2021/3/8/v1viztxjab9e9a6of4by/redbulltv"alt="Red Bull TV Logo"><div class="chInfo">Red Bull TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/WkUFOMOSSmo?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/anT2TJY_rss5WExUZ8QFW-G4z-3paeISZx5urUY_MRuX7OWNFPgd8tmT0xfJugn6utufJvegJA=s176-c-k-c0x00ffffff-no-rj"alt="삼프로TV Logo"><div class="chInfo">삼프로TV</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="window.open(\'https://c185ba78559f47b79f8079be89884d03.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung_OutsideTV/playlist.m3u8\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Outside_TV.png"alt="Outside TV+ Logo"><div class="chInfo">Outside TV+</div></button>');
-        </script>
-
-
-        <script>
-        document.writeln('<button class="large" onclick="window.open(\'https://xzx.kr/anp\',\'_blank\'); return false;"><img src="Fun_Roads_logo.png"alt="Fun Roads TV Logo"><div class="chInfo">Fun Roads TV</div></button>');
-        </script>
-
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://1621590671.rsc.cdn77.org/HLS/BILLIARDTV_SCTE.m3u8\',\'_blank\'); return false;"><img src="https://iili.io/H3UP6Ff.png"alt="Billiard TV Logo"><div class="chInfo">Billiard TV</div></button>');
-        </script>
-
-        <script>
-        document.writeln('<button class="large2" onclick="window.open(\'http://webtv.dothome.co.kr/ch/catv/35.php\',\'_blank\'); return false;"><img src="https://image.sbs.co.kr/medianet/favicon/sports_logo.png"alt="SBS Sports Logo"><div class="chInfo">SBS Sports</div></button>');
-        </script>
-
-
-        <script>
-        document.writeln('<button class="large3" onclick="window.open(\'https://tv.kakao.com/channel/2835210\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/CgZucPKsxLG4zepRFMo2twJf1xwQ6-ge3lv894B9NkS7P2I-uvKB4So7ufSCYKPtaZ7-eYuEAQ=s900-c-k-c0x00ffffff-no-rj"alt="STN SPORTS Logo"><div class="chInfo">STN SPORTS</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/36.php\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/0k2dKvi2CQ_7L1nwFWaz2KIzwAPGovW5mj6AeeCJN4Q-ZQWUUX5TzPQDj_QFTNrKFW1EqMkM834=s176-c-k-c0x00ffffff-no-rj"alt="SBS GOLF Logo"><div class="chInfo">SBS GOLF</div></button>');
         </script>
 
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://tv.kakao.com/channel/2731729\',\'_blank\'); return false;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqHZjtE-0UE8ar7V5baVXL_-t_b7c4DhqY68eAiORO-kplsOiRNKI4M81tazfRwoKyWM&usqp=CAU"alt="FTV Logo"><div class="chInfo">FTV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'http://1.214.67.103/vod/57801.m3u8?VOD_RequestID=v2M2-0101-1010-7272-5050-000020180717021633;LTE;720P;WIFI\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/UtDi1RSABpoycT8rgXBKHGem_ZZ0A456tvgxavthHmDwzxllCsfqFqdpcFt-3e_eGgdYsu31bQ=s176-c-k-c0x00ffffff-no-rj"alt="스크린골프존 Logo"><div class="chInfo">스크린골프존</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UCRzuyj_qGaQULd6qX1pwITw&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="한화아쿠아플라넷.png"alt="아쿠아플라넷 Logo"><div class="chInfo">아쿠아플라넷</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/58.php\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/JTBCGolf%26Sportslogo.png"alt="JTBC 골프&스포츠 Logo"><div class="chInfo">JTBC 골프&스포츠</div></button>');
+        </script>
+
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://xzx.kr/ann\',\'_blank\'); return false;"><img src="https://www.edgesport.com/static/logo-grey-cf2d7ac74ef032c62a994705daa7af14.svg"alt="EDGEsport Logo"><div class="chInfo">EDGEsport</div></button>');
+        </script>
+
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/61.php\',\'_blank\'); return false;"><img src="https://img.redbull.com/images/w_250/q_auto,f_auto/redbullcom/2021/3/8/v1viztxjab9e9a6of4by/redbulltv"alt="Red Bull TV Logo"><div class="chInfo">Red Bull TV</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/spotv2/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://static.visionplus.id/images/channel/fa2e7f65/768b.png"alt="SPOTV2 Logo"><div class="chInfo">SPOTV2</div></button>');
+            document.writeln('<button class="large" onclick="window.open(\'https://c185ba78559f47b79f8079be89884d03.mediatailor.us-east-1.amazonaws.com/v1/master/44f73ba4d03e9607dcd9bebdcb8494d86964f1d8/Samsung_OutsideTV/playlist.m3u8\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Outside_TV.png"alt="Outside TV+ Logo"><div class="chInfo">Outside TV+</div></button>');
         </script>
 
 
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://xzx.kr/anp\',\'_blank\'); return false;"><img src="Fun_Roads_logo.png"alt="Fun Roads TV Logo"><div class="chInfo">Fun Roads TV</div></button>');
+        </script>
 
+        <!-- 빌리어즈 TV,고화질 -->
+        <script>
+            document.writeln('<button class="large6" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/billiard/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://cdn.mhnse.com/news/photo/202205/105135_88737_587.jpg"alt="빌리어즈 TV Logo"><div class="chInfo">빌리어즈 TV</div></button>');
+        </script>
+
+        <!-- Billiards TV,해외 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://1621590671.rsc.cdn77.org/HLS/BILLIARDTV_SCTE.m3u8\',\'_blank\'); return false;"><img src="https://iili.io/H3UP6Ff.png"alt="Billiards TV Logo"><div class="chInfo">Billiards TV</div></button>');
+        </script>
+
+
+        <!-- SBS Sports, 고화질 -->
+        <script>
+            document.writeln('<button class="large2" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/sbssports/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://image.sbs.co.kr/medianet/favicon/sports_logo.png"alt="SBS Sports Logo"><div class="chInfo">SBS Sports</div></button>');
+        </script>
+
+        <!-- KBS N SPORTS, 고화질 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/kbsnsports/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/1xypomqZ_42WBLqjQ9Phyg9bIwMekkKhzxAtsiu3JXWa1djG26uPTGnHYHUPnpq6obbMbPVG-A=s176-c-k-c0x00ffffff-no-rj"alt="KBSNSPORTS Logo"><div class="chInfo">KBSNSPORTS</div></button>');
+        </script>
+
+
+        <!-- STN Sports, 고화질 -->
+        <script>
+            document.writeln('<button class="large3" onclick="window.open(\'https://tv.kakao.com/channel/2835210\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/CgZucPKsxLG4zepRFMo2twJf1xwQ6-ge3lv894B9NkS7P2I-uvKB4So7ufSCYKPtaZ7-eYuEAQ=s900-c-k-c0x00ffffff-no-rj"alt="STN SPORTS Logo"><div class="chInfo">STN SPORTS</div></button>');
+        </script>
+
+
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UCRzuyj_qGaQULd6qX1pwITw&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="한화아쿠아플라넷.png"alt="아쿠아플라넷 Logo"><div class="chInfo">아쿠아플라넷</div></button>');
+        </script>
+
+        <!-- SPOTV, 고화질 -->
+        <script>
+            document.writeln('<button class="large3" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/spotv1/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://www.spotv.net/images/intro/intro_logo.png"alt="SPOTV Logo"><div class="chInfo">SPOTV</div></button>');
+        </script>
+
+        <!-- SPOTV2, 고화질 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/spotv2/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://static.visionplus.id/images/channel/fa2e7f65/768b.png"alt="SPOTV2 Logo"><div class="chInfo">SPOTV2</div></button>');
+        </script>
+
+        <!-- FTV, 고화질 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://tistory1.daumcdn.net/tistory/2864485/skin/images/CATV_562_B2C3DA7C.m3u8\',\'_blank\'); return false;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqHZjtE-0UE8ar7V5baVXL_-t_b7c4DhqY68eAiORO-kplsOiRNKI4M81tazfRwoKyWM&usqp=CAU"alt="FTV1 Logo"><div class="chInfo">FTV1</div></button>');
+        </script>
+
+        <!-- FTV, 고화질, 카카오TV -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://tv.kakao.com/channel/2731729\',\'_blank\'); return false;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqHZjtE-0UE8ar7V5baVXL_-t_b7c4DhqY68eAiORO-kplsOiRNKI4M81tazfRwoKyWM&usqp=CAU"alt="FTV2 Logo"><div class="chInfo">FTV2</div></button>');
+        </script>
+
+        <!-- 바둑TV -->
+        <script>
+            document.writeln('<button class="large3" onclick="window.open(\'http://tvbaduk-liveout-catenoid-net.akamaized.net/live-03-tvbaduk01/tvbaduk01_200k/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.namu.wiki/i/NMT97AEFfjgg4XbMrQIx9SLN9SEQk7v4kdllm9rIcFnz9GyaZrQ6Tia83zRDD3CHGpXOHNMvIdqE4W4bVrNpIQ.svg"alt="바둑TV Logo"><div class="chInfo">바둑TV</div></button>');
+        </script>
+
+        <!-- 볼링플러스, 고화질 -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://d2zve2l62bwzcf.cloudfront.net/h264/bowling/cmaf-hls/master.m3u8\',\'_blank\'); return false;"><img src="https://i.namu.wiki/i/bhTPo4hGQkvwZYePzq5kpaIUqH_SHYlsZarnoUEqklwIYQDMLQ52yOpDhc1BNp3x9smDsh6634IzQD9R_uDKGA.webp"alt="볼링+ Logo"><div class="chInfo">볼링+</div></button>');
+        </script>
 
 
     </div>
@@ -419,10 +510,11 @@
 
     <div class="tvGroup2">
 
-<!-- EBS1 -->
+        <!-- EBS1 -->
         <!-- <div class="tvGroup" style="margin-top: 10px;">-->
         <button class="large1" onclick="playEBS1()"><!--EBS1 재생-->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/EBS_1TV_Logo.svg/512px-EBS_1TV_Logo.svg.png" alt="EBS1 Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/EBS_1TV_Logo.svg/512px-EBS_1TV_Logo.svg.png"
+                alt="EBS1 Logo">
             <div class="chInfo">EBS 1TV</div>
         </button>
 
@@ -432,7 +524,7 @@
                 openCenter(url);
             }
         </script>
-<!-- EBS2 -->
+        <!-- EBS2 -->
         <button class="large1" onclick="playEBS2()"><!--EBS2 재생-->
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/EBS_2_logo.svg" alt="EBS2 Logo">
             <div class="chInfo">EBS 2TV</div>
@@ -444,63 +536,82 @@
                 openCenter(url);
             }
         </script>
-<!-- EBS KIDS -->
+        <!-- EBS KIDS -->
         <script>
-        document.writeln('<button class="large" onclick="window.open(\'https://ebsonair.ebs.co.kr/ebsufamilypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/62oo8Bx.png"alt="EBS KIDS Logo"><div class="chInfo">EBS KIDS</div></button>');
+            document.writeln('<button class="large" onclick="window.open(\'https://ebsonair.ebs.co.kr/ebsufamilypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/62oo8Bx.png"alt="EBS KIDS Logo"><div class="chInfo">EBS KIDS</div></button>');
         </script>
-<!-- EBS 플러스1 -->
+        <!-- EBS 플러스1 -->
         <script>
-        document.writeln('<button class="large4" onclick="window.open(\'https://ebsonair.ebs.co.kr/plus1familypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/ImUHRG2.png"alt="EBS 플러스1 Logo"><div class="chInfo">EBS 플러스1</div></button>');   
+            document.writeln('<button class="large4" onclick="window.open(\'https://ebsonair.ebs.co.kr/plus1familypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/ImUHRG2.png"alt="EBS 플러스1 Logo"><div class="chInfo">EBS 플러스1</div></button>');   
         </script>
-<!-- EBS 플러스2 -->
+        <!-- EBS 플러스2 -->
         <script>
-        document.writeln('<button class="large4" onclick="window.open(\'https://ebsonair.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/mgFRZFq.png"alt="EBS 플러스2 Logo"><div class="chInfo">EBS 플러스2</div></button>');
-        </script>
-
-<!-- EBS English -->
-        <script>
-        document.writeln('<button class="large4" onclick="window.open(\'https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/qceaIf7.png"alt="EBS English Logo"><div class="chInfo">EBS English</div></button>');
+            document.writeln('<button class="large4" onclick="window.open(\'https://ebsonair.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/mgFRZFq.png"alt="EBS 플러스2 Logo"><div class="chInfo">EBS 플러스2</div></button>');
         </script>
 
-<!-- EI ENGLISH -->
+        <!-- EBS English -->
         <script>
-        document.writeln('<button class="large" onclick="window.open(\'https://tv.kakao.com/channel/2744126\',\'_blank\'); return false;"><img src="JEI_English_TV-410x230.jpg"alt="JEI ENGLISH Logo"><div class="chInfo">JEI ENGLISH</div></button>');
+            document.writeln('<button class="large4" onclick="window.open(\'https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8\',\'_blank\'); return false;"><img src="https://i.imgur.com/qceaIf7.png"alt="EBS English Logo"><div class="chInfo">EBS English</div></button>');
         </script>
 
-<!-- JEI 재능 TV -->
+        <!-- JEI ENGLISH -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://tv.kakao.com/channel/2673933\',\'_blank\'); return false;"><img src="JEI재능.webp"alt="JEI 재능 TV Logo"><div class="chInfo">JEI 재능 TV</div></button>');
+            document.writeln('<button class="large" onclick="window.open(\'https://tv.kakao.com/channel/2744126\',\'_blank\'); return false;"><img src="JEI_English_TV-410x230.jpg"alt="JEI ENGLISH Logo"><div class="chInfo">JEI ENGLISH</div></button>');
+        </script>
+
+        <!-- JEI 재능 TV -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://tv.kakao.com/channel/2673933\',\'_blank\'); return false;"><img src="JEI재능.webp"alt="JEI 재능 TV Logo"><div class="chInfo">JEI 재능 TV</div></button>');
+        </script>
+
+
+        <!-- 방송대학TV 고화질 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://live.knou.ac.kr/knou1/live1/playlist.m3u8\',\'_blank\'); return false;"><img src="https://www.knou.ac.kr/sites/knou/images/intro2401/banner_03.png"alt="방송대학TV Logo"><div class="chInfo">방송대학TV</div></button>');
         </script>
 
 
 
-
-<!-- JTBC -->
+        <!-- JTBC -->
         <script>
             document.writeln('<button class="large1" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/51.php\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/JTBC_logo.svg/1920px-JTBC_logo.svg.png"alt="JTBC Logo"><div class="chInfo">JTBC</div></button>');
         </script>
 
-<!-- 채널A -->
+        <!-- 채널A_site -->
         <script>
-            document.writeln('<button class="large3" onclick="window.open(\'https://play.afreecatv.com/channela01/248107609\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Channel_A_Logo_transparent.png"alt="채널A Logo"><div class="chInfo">채널A</div></button>');
+            document.writeln('<button class="large3" onclick="window.open(\'https://play.afreecatv.com/channela01/248107609\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Channel_A_Logo_transparent.png"alt="채널A_site Logo"><div class="chInfo">채널A_site</div></button>');
         </script>
 
-<!-- TV조선 -->
+        <!-- 채널A -->
         <script>
-            document.writeln('<button class="large" onclick="window.open(\'http://broadcast.tvchosun.com/onair/on.cstv\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/TV_Chosun_Logo_%28English%29.svg"alt="TV조선 Logo"><div class="chInfo">TV조선</div></button>');
+            document.writeln('<button class="large3" onclick="window.open(\'https://tistory1.daumcdn.net/tistory/2864485/skin/images/CATV_52_73BCC134.m3u8\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Channel_A_Logo_transparent.png"alt="채널A Logo"><div class="chInfo">채널A</div></button>');
+        </script>
+
+        <!-- TV조선_site -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'http://broadcast.tvchosun.com/onair/on.cstv\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/TV_Chosun_Logo_%28English%29.svg"alt="TV조선_site Logo"><div class="chInfo">TV조선_site</div></button>');
         </script>
 
 
-<!-- JTBCdrama -->
+        <!-- TV조선 -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/MnjsqzOQbRE?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/VK7LJ_7GlVdDQHTxqDq082zE_FQhiUpKi3lQGAUtbt5vZH-uGVBq3wWXXA3MhaCyf44saCu5NQ=s176-c-k-c0x00ffffff-no-rj"alt="JTBCdrama Logo"><div class="chInfo">JTBCdrama</div></button>');
+            document.writeln('<button class="large" onclick="window.open(\'https://tistory1.daumcdn.net/tistory/2864485/skin/images/CATV_213_B633C402.m3u8\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/TV_Chosun_Logo_%28English%29.svg"alt="TV조선 Logo"><div class="chInfo">TV조선</div></button>');
         </script>
 
 
 
-<!-- MBN 저화질 -->
+
+        <!-- JTBCdrama -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/MnjsqzOQbRE?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/VK7LJ_7GlVdDQHTxqDq082zE_FQhiUpKi3lQGAUtbt5vZH-uGVBq3wWXXA3MhaCyf44saCu5NQ=s176-c-k-c0x00ffffff-no-rj"alt="JTBCdrama Logo"><div class="chInfo">JTBCdrama</div></button>');
+        </script>
+
+
+
+        <!-- MBN 저화질 -->
         <button class="large1" onclick="playMBN()"><!--MBN 재생-->
-            <img src="https://welcon.kocca.kr/cmm/getImage.do?atchFileId=FILE_f9b8c175-c60e-4e9f-9ad8-f7796a0637b9&amp;fileSn=1&amp;thumb=" alt="MBN Logo">
+            <img src="https://welcon.kocca.kr/cmm/getImage.do?atchFileId=FILE_f9b8c175-c60e-4e9f-9ad8-f7796a0637b9&amp;fileSn=1&amp;thumb="
+                alt="MBN Logo">
             <div class="chInfo">MBN저화질</div>
         </button>
 
@@ -511,97 +622,112 @@
             }
         </script>
 
-<!-- MBN 고화질 -->
+        <!-- MBN 고화질 -->
         <script>
-        document.writeln('<button class="large1" onclick="window.open(\'http://wms2-kortv.akamaized.net/a_live/81992167/smil:20tv121.smil/chunklist_b2500000.m3u8\',\'_blank\'); return false;"><img src="https://welcon.kocca.kr/cmm/getImage.do?atchFileId=FILE_f9b8c175-c60e-4e9f-9ad8-f7796a0637b9&amp;fileSn=1&amp;thumb="alt="MBN고화질 Logo"><div class="chInfo">MBN고화질</div></button>');
+            document.writeln('<button class="large1" onclick="window.open(\'http://wms2-kortv.akamaized.net/a_live/81992167/smil:20tv121.smil/chunklist_b2500000.m3u8\',\'_blank\'); return false;"><img src="https://welcon.kocca.kr/cmm/getImage.do?atchFileId=FILE_f9b8c175-c60e-4e9f-9ad8-f7796a0637b9&amp;fileSn=1&amp;thumb="alt="MBN고화질 Logo"><div class="chInfo">MBN고화질</div></button>');
         </script>
 
 
 
 
-<!-- Arirang TV -->
+        <!-- Arirang TV -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8\',\'_blank\'); return false;"><img src="https://company.arirang.com/snsImage/arirang_TV.png"alt="Arirang TV Logo"><div class="chInfo">Arirang TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8\',\'_blank\'); return false;"><img src="https://company.arirang.com/snsImage/arirang_TV.png"alt="Arirang TV Logo"><div class="chInfo">Arirang TV</div></button>');
         </script>
 
-<!-- 토마토집통 -->
+        <!-- 토마토집통 -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UC0OGisUcF1mAwL4pqjLCmhg&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/cCLMtQ0GhDfxRJ1D7_Ra60tXvAi5arzXagFkhwjKncasAYtzwXD4a6xMaonITx-Z5sDhJf_4dg=s176-c-k-c0x00ffffff-no-rj-mo"alt="토마토집통 Logo"><div class="chInfo">토마토집통</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UC0OGisUcF1mAwL4pqjLCmhg&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/cCLMtQ0GhDfxRJ1D7_Ra60tXvAi5arzXagFkhwjKncasAYtzwXD4a6xMaonITx-Z5sDhJf_4dg=s176-c-k-c0x00ffffff-no-rj-mo"alt="토마토집통 Logo"><div class="chInfo">토마토집통</div></button>');
         </script>
 
-<!-- 토마토TV -->
+        <!-- 토마토TV -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/8rz4mn87lck?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/6tQEw4b55Us6SPkqqqCtDC4s8rl--EGHFkX4CGgo1Kcwj0NDnVG4sFu-DCDU3tHBf0qlIiKzkA=s176-c-k-c0x00ffffff-no-rj-mo"alt="토마토TV Logo"><div class="chInfo">토마토TV</div></button>');
-        </script>
-
-
-<!-- 한국경제TV -->
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/NJUjU9ALj4A?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/JwJ-Sbw0KP-qECIq7-Tx9hmMB1aezWMS7tZAfIJXwxbrAm5dlNn-MdDsE2jDXtEHAmLPUqOT4w=s176-c-k-c0x00ffffff-no-rj-mo"alt="한국경제TV Logo"><div class="chInfo">한국경제TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/8rz4mn87lck?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/6tQEw4b55Us6SPkqqqCtDC4s8rl--EGHFkX4CGgo1Kcwj0NDnVG4sFu-DCDU3tHBf0qlIiKzkA=s176-c-k-c0x00ffffff-no-rj-mo"alt="토마토TV Logo"><div class="chInfo">토마토TV</div></button>');
         </script>
 
 
-
-<!-- 이데일리TV -->
+        <!-- 한국경제TV -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/9pYfinTpFkk?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaYFFQxIrwXjBJopkXNl-qOfZ7hxOONnpgNI7DiFg=s176-c-k-c0x00ffffff-no-rj-mo"alt="이데일리TV Logo"><div class="chInfo">이데일리TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/NJUjU9ALj4A?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/JwJ-Sbw0KP-qECIq7-Tx9hmMB1aezWMS7tZAfIJXwxbrAm5dlNn-MdDsE2jDXtEHAmLPUqOT4w=s176-c-k-c0x00ffffff-no-rj-mo"alt="한국경제TV Logo"><div class="chInfo">한국경제TV</div></button>');
         </script>
 
 
 
-<!-- 매일경제TV -->
+        <!-- 이데일리TV -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/s9xL1DpBsfQ?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaHpvHNJEtYuG6joSVELqeMOCe5aCnJFwUljJGkYQ=s176-c-k-c0x00ffffff-no-rj-mo"alt="매일경제TV Logo"><div class="chInfo">매일경제TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/9pYfinTpFkk?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaYFFQxIrwXjBJopkXNl-qOfZ7hxOONnpgNI7DiFg=s176-c-k-c0x00ffffff-no-rj-mo"alt="이데일리TV Logo"><div class="chInfo">이데일리TV</div></button>');
         </script>
 
 
 
-<!-- KTV -->
-    <script>
-    document.writeln('<button class="large5" onclick="window.open(\'https://hlive.ktv.go.kr/live/klive_h.stream/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/GVaTUlSEqQraFBUQQ5TSli2-dFt-Lm8-CUNrJ9QpF8aenxd4-EwAn2rpkQuyB6Qwh6drWN8Ypw=s176-c-k-c0x00ffffff-no-rj-mo"alt="KTV Logo"><div class="chInfo">KTV</div></button>');
-    </script>
-
-
-
-<!-- 국회방송 -->
+        <!-- 매일경제TV -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://m.webcast.go.kr/live/_definst_/smil:natv_720p.smil/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/bpagCGh_ZS0mx8VRUqvfHCP3bNaqGmwcn9UqB_RIhOVEZqwn6kAaA6ltHTh_fQ2zMj0gUG2y=s176-c-k-c0x00ffffff-no-rj-mo"alt="국회방송 Logo"><div class="chInfo">국회방송</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/s9xL1DpBsfQ?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaHpvHNJEtYuG6joSVELqeMOCe5aCnJFwUljJGkYQ=s176-c-k-c0x00ffffff-no-rj-mo"alt="매일경제TV Logo"><div class="chInfo">매일경제TV</div></button>');
         </script>
 
 
-<!-- 국방TV -->
+        <!-- 머니투데이방송, 고화질 -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/dKFhpYCjhvBZrFDYWmouUhh7Yfz6SmB0JQrynj7MfrEAAXvXqW8cCGERqE8RQ5a7AarMt1tPZA=s176-c-k-c0x00ffffff-no-rj-mo"alt="국방TV Logo"><div class="chInfo">국방TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'http://moneytoday1.ktcdn.co.kr:1935/mtnlive/720/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/EZDG8SkS9lhBJnVF3vpIOujCToCGcmv6Prv_f3EzCtdmh7ncA1jjDIzbaCwy_5PQR-GsVLvntA=s176-c-k-c0x00ffffff-no-rj"alt="머니투데이 Logo"><div class="chInfo">머니투데이</div></button>');
+        </script>
+
+        <!-- 머니투데이방송, youtube -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/CbjcNK6ae-s?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/EZDG8SkS9lhBJnVF3vpIOujCToCGcmv6Prv_f3EzCtdmh7ncA1jjDIzbaCwy_5PQR-GsVLvntA=s176-c-k-c0x00ffffff-no-rj"alt="머니투데이2 Logo"><div class="chInfo">머니투데이2</div></button>');
+        </script>
+
+        <!-- 서울경제TV, youtube -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/yysa0q-Td0I?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ojEXUTsMmB9-u4zwlCH-ukLCcPbXZ2LT14NHO3kXwQs_uhOwl-i2ox5eBcuHRZjs8X6qZwGbZ_s=s176-c-k-c0x00ffffff-no-rj"alt="서울경제TV Logo"><div class="chInfo">서울경제TV</div></button>');
+        </script>
+
+
+        <!-- KTV -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://hlive.ktv.go.kr/live/klive_h.stream/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/GVaTUlSEqQraFBUQQ5TSli2-dFt-Lm8-CUNrJ9QpF8aenxd4-EwAn2rpkQuyB6Qwh6drWN8Ypw=s176-c-k-c0x00ffffff-no-rj-mo"alt="KTV Logo"><div class="chInfo">KTV</div></button>');
         </script>
 
 
 
-<!-- 한국농업방송 -->
+        <!-- 국회방송 -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://media.joycorp.co.kr:4443/live/live_720p/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/MGvqD_wYbX2uazVega3MCrVPinSu3cq7i6s-NO7L9GyTyr3zrrS2Kxcuj57pp7-U21_lG7tA5Q=s176-c-k-c0x00ffffff-no-rj-mo"alt="한국농업방송 Logo"><div class="chInfo">한국농업방송</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://m.webcast.go.kr/live/_definst_/smil:natv_720p.smil/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/bpagCGh_ZS0mx8VRUqvfHCP3bNaqGmwcn9UqB_RIhOVEZqwn6kAaA6ltHTh_fQ2zMj0gUG2y=s176-c-k-c0x00ffffff-no-rj-mo"alt="국회방송 Logo"><div class="chInfo">국회방송</div></button>');
+        </script>
+
+
+        <!-- 국방TV -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/dKFhpYCjhvBZrFDYWmouUhh7Yfz6SmB0JQrynj7MfrEAAXvXqW8cCGERqE8RQ5a7AarMt1tPZA=s176-c-k-c0x00ffffff-no-rj-mo"alt="국방TV Logo"><div class="chInfo">국방TV</div></button>');
         </script>
 
 
 
-<!-- 한국직업방송 -->
-
+        <!-- 한국농업방송 -->
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'http://live.worktv.or.kr:1935/live/wowtvlive1.sdp/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/4Sof6opGxntRIpKxZtR0PjE8q318mw64APgnZEBAWmEiOsjzTNAO_IeRiwvCBZVrfUeh6BVDSg=s176-c-k-c0x00ffffff-no-rj-mo"alt="한국직업방송 Logo"><div class="chInfo">한국직업방송</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://media.joycorp.co.kr:4443/live/live_720p/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/MGvqD_wYbX2uazVega3MCrVPinSu3cq7i6s-NO7L9GyTyr3zrrS2Kxcuj57pp7-U21_lG7tA5Q=s176-c-k-c0x00ffffff-no-rj-mo"alt="한국농업방송 Logo"><div class="chInfo">한국농업방송</div></button>');
         </script>
 
 
-<!-- 국악방송 -->
-<script>
-    document.writeln('<button class="large5" onclick="window.open(\'https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKZgrdyuxYW7e87zGA_Hx9c_xczg-gV-JtU8DJGzzA=s176-c-k-c0x00ffffff-no-rj-mo"alt="국악방송 Logo"><div class="chInfo">국악방송</div></button>');
-    </script>
 
-<!-- 복지TV -->
-    <script>
-    document.writeln('<button class="large5" onclick="window.open(\'http://139.150.248.29/smartlive/312/46324be24454bd98f785039457ac695d/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/eFAV2lB7Nyt41wYl38f8mowFajytJnd8SOyf0XRoqUhOMzK8AwtTT_oLOxTQVmUWU7Xq7-ZzKA=s176-c-k-c0x00ffffff-no-rj-mo"alt="복지TV Logo"><div class="chInfo">복지TV</div></button>');
-    </script>
+        <!-- 한국직업방송 -->
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'http://live.worktv.or.kr:1935/live/wowtvlive1.sdp/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/4Sof6opGxntRIpKxZtR0PjE8q318mw64APgnZEBAWmEiOsjzTNAO_IeRiwvCBZVrfUeh6BVDSg=s176-c-k-c0x00ffffff-no-rj-mo"alt="한국직업방송 Logo"><div class="chInfo">한국직업방송</div></button>');
+        </script>
 
 
-    
+        <!-- 국악방송 -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKZgrdyuxYW7e87zGA_Hx9c_xczg-gV-JtU8DJGzzA=s176-c-k-c0x00ffffff-no-rj-mo"alt="국악방송 Logo"><div class="chInfo">국악방송</div></button>');
+        </script>
+
+        <!-- 복지TV -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'http://139.150.248.29/smartlive/312/46324be24454bd98f785039457ac695d/playlist.m3u8\',\'_blank\'); return false;"><img src="https://yt3.ggpht.com/eFAV2lB7Nyt41wYl38f8mowFajytJnd8SOyf0XRoqUhOMzK8AwtTT_oLOxTQVmUWU7Xq7-ZzKA=s176-c-k-c0x00ffffff-no-rj-mo"alt="복지TV Logo"><div class="chInfo">복지TV</div></button>');
+        </script>
+
+
+
 
 
 
@@ -614,14 +740,14 @@
     <script
         language="javascript">document.write(unescape("%3c%73%63%72%69%70%74%20%74%79%70%65%3d%22%74%65%78%74%2f%6a%61%76%61%73%63%72%69%70%74%22%20%73%72%63%3d%22%68%74%74%70%73%3a%2f%2f%74%69%73%74%6f%72%79%31%2e%64%61%75%6d%63%64%6e%2e%6e%65%74%2f%74%69%73%74%6f%72%79%2f%32%31%32%30%38%37%32%2f%73%6b%69%6e%2f%69%6d%61%67%65%73%2f%77%65%62%74%76%5f%74%76%5f%31%2d%31%2d%31%2e%6a%73%22%3e%3c%2f%73%63%72%69%70%74%3e"));</script>
 -->
-<!-- 자바스크립트를 별도 파일로 작성한 경우 -->
-<!--
+        <!-- 자바스크립트를 별도 파일로 작성한 경우 -->
+        <!--
     <script type="text/javascript"
         src="https://tistory1.daumcdn.net/tistory/2120872/skin/images/webtv_tv_1-1-1.js"></script>
 
 
 -->
-<!--        <script type="text/javascript" src="webtv_tv_1-1-1.js"></script>
+        <!--        <script type="text/javascript" src="webtv_tv_1-1-1.js"></script>
         
     <table style="background:#CCCCCC;border-spacing:1px" cellspacing="1">
         <tbody>
@@ -642,7 +768,7 @@
 
         <script src="jquery.min.js.다운로드"></script>
 
-<!--
+        <!--
         <script>
 
 /*text javascript*/
@@ -716,49 +842,46 @@
         </script>
 -->
 
-<!--html_가장 잘 만든 경우 -->
+        <!--html_가장 잘 만든 경우 -->
 
         <button class="large1" onclick="popKBS('11')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/KBS_1_logo.svg/1920px-KBS_1_logo.svg.png" alt="KBS1 Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/KBS_1_logo.svg/1920px-KBS_1_logo.svg.png"
+                alt="KBS1 Logo">
             <div class="chInfo">KBS 1TV</div>
         </button>
 
 
         <button class="large1" onclick="popKBS('12')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/KBS_2_logo.svg/1920px-KBS_2_logo.svg.png" alt="KBS1 Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/KBS_2_logo.svg/1920px-KBS_2_logo.svg.png"
+                alt="KBS1 Logo">
             <div class="chInfo">KBS 2TV</div>
         </button>
 
 
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'N91\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/KBS_DRAMA.svg/512px-KBS_DRAMA.svg.png"alt="KBS DRAMA Logo"><div class="chInfo">KBS DRAMA</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'N91\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/KBS_DRAMA.svg/512px-KBS_DRAMA.svg.png"alt="KBS DRAMA Logo"><div class="chInfo">KBS DRAMA</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'N92\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/KBS_JOY.svg/512px-KBS_JOY.svg.png"alt="KBS JOY Logo"><div class="chInfo">KBS JOY</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'N92\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/KBS_JOY.svg/512px-KBS_JOY.svg.png"alt="KBS JOY Logo"><div class="chInfo">KBS JOY</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'N94\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/KBS_Story.svg/512px-KBS_Story.svg.png"alt="KBS STORY Logo"><div class="chInfo">KBS STORY</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'N94\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/KBS_Story.svg/512px-KBS_Story.svg.png"alt="KBS STORY Logo"><div class="chInfo">KBS STORY</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'N93\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/KBS_Life.svg/512px-KBS_Life.svg.png"alt="KBS LIFE Logo"><div class="chInfo">KBS LIFE</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'N93\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/KBS_Life.svg/512px-KBS_Life.svg.png"alt="KBS LIFE Logo"><div class="chInfo">KBS LIFE</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'N96\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/KBS_kids.svg/512px-KBS_kids.svg.png"alt="KBS KIDS Logo"><div class="chInfo">KBS KIDS</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'N96\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/KBS_kids.svg/512px-KBS_kids.svg.png"alt="KBS KIDS Logo"><div class="chInfo">KBS KIDS</div></button>');
         </script>
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'14\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/KBS_World_%282009%29.svg/512px-KBS_World_%282009%29.svg.png"alt="KBS WORLD TV Logo"><div class="chInfo">KBS WORLD TV</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'14\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/KBS_World_%282009%29.svg/512px-KBS_World_%282009%29.svg.png"alt="KBS WORLD TV Logo"><div class="chInfo">KBS WORLD TV</div></button>');
         </script>
-
-        <script>
-        document.writeln('<button class="large" onclick="window.open(\'http://kbs-dokdo.gscdn.com/dokdo_800/_definst_/dokdo_800.stream/playlist.m3u8\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/KBS_World_%282009%29.svg/512px-KBS_World_%282009%29.svg.png"alt="KBS WORLD Dokdo Logo"><div class="chInfo">KBS Dokdo</div></button>');
-        </script>
-
 
 
 
@@ -770,58 +893,24 @@
 
 
         <button class="large" onclick="popKBSNews()">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/KBS_logo.svg/1920px-KBS_logo.svg.png" alt="KBS뉴스 Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/KBS_logo.svg/1920px-KBS_logo.svg.png"
+                alt="KBS뉴스 Logo">
             <div class="chInfo">KBS뉴스</div>
         </button>
 
 
         <script>
-        document.writeln('<button class="large" onclick="popKBS(\'81\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/KBS_logo.svg/1920px-KBS_logo.svg.png"alt="KBS NEWS D Logo"><div class="chInfo">KBS NEWS D</div></button>');
-        </script>
-    
-
-
-        <script>
-        document.writeln('<button class="large1" onclick="window.open(\'https://www.youtube.com/embed/q-Wv4Pvt-5A?autoplay=1\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Munhwa_Broadcasting_Company.svg/512px-Munhwa_Broadcasting_Company.svg.png"alt="MBC뉴스 Logo"><div class="chInfo">MBC뉴스</div></button>');
-        </script>
-
-        <script>
-        document.writeln('<button class="large2" onclick="popSBSNews();"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seoul_Broadcasting_System_logo.svg"alt="SBS뉴스 Logo"><div class="chInfo">SBS뉴스</div></button>');        
-        </script>
-
-
-
- 
-
-
-
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=FpMqILqSDW8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbVmSEY5q3NN3iervRC30UgqemtZN-KWfQRSpBgbg=s176-c-k-c0x00ffffff-no-rj"alt="연합뉴스반복 Logo"><div class="chInfo">연합뉴스반복</div></button>');
-        </script>
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=6QZ_qc75ihU\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbVmSEY5q3NN3iervRC30UgqemtZN-KWfQRSpBgbg=s176-c-k-c0x00ffffff-no-rj"alt="연합뉴스24 Logo"><div class="chInfo">연합뉴스24</div></button>');
-        </script>
-
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=FJfwehhzIhw\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ezG7fZAoI4puqxZvEHRY0Xfwl6CcR3bWRadwh-lg_-JSuBw9aK6hpJuR5wIlu1WHhsvseAWzfyA=s176-c-k-c0x00ffffff-no-rj"alt="YTN24 Logo"><div class="chInfo">YTN24</div></button>');
-        </script>
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=rVq4nCacGpQ\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ezG7fZAoI4puqxZvEHRY0Xfwl6CcR3bWRadwh-lg_-JSuBw9aK6hpJuR5wIlu1WHhsvseAWzfyA=s176-c-k-c0x00ffffff-no-rj"alt="YTN반복 Logo"><div class="chInfo">YTN반복</div></button>');
-        </script>
-
-
-        <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=2C2WCLhDsR4\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKazrRqMgkGjttNv1l4XUJc86BomYeaTZFD3EvKBHg=s176-c-k-c0x00ffffff-no-rj"alt="YTN dmb Logo"><div class="chInfo">YTN dmb</div></button>');
+            document.writeln('<button class="large" onclick="popKBS(\'81\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/KBS_logo.svg/1920px-KBS_logo.svg.png"alt="KBS NEWS D Logo"><div class="chInfo">KBS NEWS D</div></button>');
         </script>
 
 
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=xfFa_kcPnCY\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbbas-omUGsQrlB5KYJmPwNMTZXgm9Y1_VI1kfEOw=s176-c-k-c0x00ffffff-no-rj"alt="YTN 사이언스 Logo"><div class="chInfo">YTN 사이언스</div></button>');
+            document.writeln('<button class="large1" onclick="window.open(\'https://www.youtube.com/embed/q-Wv4Pvt-5A?autoplay=1\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Munhwa_Broadcasting_Company.svg/512px-Munhwa_Broadcasting_Company.svg.png"alt="MBC뉴스 Logo"><div class="chInfo">MBC뉴스</div></button>');
+        </script>
+
+        <script>
+            document.writeln('<button class="large2" onclick="popSBSNews();"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seoul_Broadcasting_System_logo.svg"alt="SBS뉴스 Logo"><div class="chInfo">SBS뉴스</div></button>');        
         </script>
 
 
@@ -832,7 +921,45 @@
 
 
         <script>
-        document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/s9xL1DpBsfQ?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaHpvHNJEtYuG6joSVELqeMOCe5aCnJFwUljJGkYQ=s176-c-k-c0x00ffffff-no-rj"alt="매일경제TV Logo"><div class="chInfo">매일경제TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=FpMqILqSDW8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbVmSEY5q3NN3iervRC30UgqemtZN-KWfQRSpBgbg=s176-c-k-c0x00ffffff-no-rj"alt="연합뉴스반복 Logo"><div class="chInfo">연합뉴스반복</div></button>');
+        </script>
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=6QZ_qc75ihU\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbVmSEY5q3NN3iervRC30UgqemtZN-KWfQRSpBgbg=s176-c-k-c0x00ffffff-no-rj"alt="연합뉴스24 Logo"><div class="chInfo">연합뉴스24</div></button>');
+        </script>
+
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=FJfwehhzIhw\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ezG7fZAoI4puqxZvEHRY0Xfwl6CcR3bWRadwh-lg_-JSuBw9aK6hpJuR5wIlu1WHhsvseAWzfyA=s176-c-k-c0x00ffffff-no-rj"alt="YTN24 Logo"><div class="chInfo">YTN24</div></button>');
+        </script>
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=rVq4nCacGpQ\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ezG7fZAoI4puqxZvEHRY0Xfwl6CcR3bWRadwh-lg_-JSuBw9aK6hpJuR5wIlu1WHhsvseAWzfyA=s176-c-k-c0x00ffffff-no-rj"alt="YTN반복 Logo"><div class="chInfo">YTN반복</div></button>');
+        </script>
+
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=2C2WCLhDsR4\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKazrRqMgkGjttNv1l4XUJc86BomYeaTZFD3EvKBHg=s176-c-k-c0x00ffffff-no-rj"alt="YTN dmb Logo"><div class="chInfo">YTN dmb</div></button>');
+        </script>
+
+        <!-- YTN 사이언스_direct -->
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/261.php/.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbbas-omUGsQrlB5KYJmPwNMTZXgm9Y1_VI1kfEOw=s176-c-k-c0x00ffffff-no-rj"alt="YTN사이언스1 Logo"><div class="chInfo">YTN사이언스1</div></button>');
+        </script>
+
+        <!-- YTN 사이언스_youtube -->
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/watch?v=xfFa_kcPnCY\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKbbas-omUGsQrlB5KYJmPwNMTZXgm9Y1_VI1kfEOw=s176-c-k-c0x00ffffff-no-rj"alt="YTN사이언스2 Logo"><div class="chInfo">YTN사이언스2</div></button>');
+        </script>
+
+
+
+
+
+
+        <script>
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/s9xL1DpBsfQ?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKaHpvHNJEtYuG6joSVELqeMOCe5aCnJFwUljJGkYQ=s176-c-k-c0x00ffffff-no-rj"alt="매일경제TV Logo"><div class="chInfo">매일경제TV</div></button>');
         </script>
 
 
@@ -846,7 +973,7 @@
 
 
     </div>
- 
+
 
     <div class="tvGroup4">
 
@@ -1082,7 +1209,8 @@
 
 
         <button class="large2" onclick="playChannel('http://1.222.207.80:1935/live/cjbtv/playlist.m3u8')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seoul_Broadcasting_System_logo.svg" alt="청주SBS Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seoul_Broadcasting_System_logo.svg"
+                alt="청주SBS Logo">
             <div class="chInfo">청주SBS</div>
         </button>
 
@@ -1103,7 +1231,7 @@
 
         <!--
         <button class="large2" onclick="play청주SBS()">--><!--청주 SBS 재생-->
-            <!--
+        <!--
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seoul_Broadcasting_System_logo.svg"
                 alt="청주SBS Logo">
             <div class="chInfo">청주SBS</div>
@@ -1125,21 +1253,22 @@
                 openCenter(url);
             }
         </script>
-        -->     <script>               
+        -->
+        <script>
             function openCenter(url) {
 
-            //  var popupWidth = w;
-            //  var popupHeight = h;
-            //  var popupX = (window.screen.width / 2) - (popupWidth / 2) + ((window.screenLeft < window.screen.width) ? 0 : window.screen.width);
-            //  var popupY= (window.screen.height / 2) - (popupHeight / 2);
-            //  window.open(url, '', 'status=no, height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent)) {
-                window.open(url);
-            }
-            else {
-                window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + url);
-            }
-            //location.replace(window.location.pathname + '?ch=' + ch);
+                //  var popupWidth = w;
+                //  var popupHeight = h;
+                //  var popupX = (window.screen.width / 2) - (popupWidth / 2) + ((window.screenLeft < window.screen.width) ? 0 : window.screen.width);
+                //  var popupY= (window.screen.height / 2) - (popupHeight / 2);
+                //  window.open(url, '', 'status=no, height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent)) {
+                    window.open(url);
+                }
+                else {
+                    window.open("chrome-extension://hahkjjkedonglpienpfiganogikkkoii/player.html#" + url);
+                }
+                //location.replace(window.location.pathname + '?ch=' + ch);
             }
 
         </script>
