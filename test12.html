@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         #video-container {
-            max-width: 640px;
+            max-width: 480px;
             margin-bottom: 20px;
         }
 
         #player {
-            max-width: 640px;
+            max-width: 480px;
         }
 
         #playlist-container {
-            max-width: 640px;
+            max-width: 480px;
             overflow-y: auto;
             max-height: 200px;
         }
@@ -112,8 +112,8 @@
             // Adjust player dimensions based on device type
             var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
             player = new YT.Player('player', {
-                height: isMobile ? '200' : '390',
-                width: isMobile ? '280' : '640',
+                height: isMobile ? '240' : '350',
+                width: isMobile ? '320' : '480',
                 playerVars: {
                     'autoplay': 1,
                     'controls': 1,
@@ -170,7 +170,7 @@
         // Additional code for mobile detection
         function handleResize() {
             var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-            player.setSize(isMobile ? '280' : '640', isMobile ? '200' : '390');
+            player.setSize(isMobile ? '320' : '480', isMobile ? '240' : '350');
         }
 
         // Add an event listener for window resize
