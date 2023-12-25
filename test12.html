@@ -112,7 +112,7 @@
             // Adjust player dimensions based on device type
             var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
             player = new YT.Player('player', {
-                height: isMobile ? '240' : '350',
+                height: isMobile ? '240' : '300',
                 width: isMobile ? '320' : '480',
                 playerVars: {
                     'autoplay': 1,
@@ -170,7 +170,7 @@
         // Additional code for mobile detection
         function handleResize() {
             var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-            player.setSize(isMobile ? '320' : '480', isMobile ? '240' : '350');
+            player.setSize(isMobile ? '320' : '480', isMobile ? '240' : '300');
         }
 
         // Add an event listener for window resize
