@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #video-container {
+            max-width: 640px;
+            margin-bottom: 20px;
+        }
+
+        #player {
+            max-width: 640px;
+        }
+
+        #playlist-container {
+            max-width: 640px;
+            overflow-y: auto;
+            max-height: 200px;
+        }
+
+        #playlist {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #playlist li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 5px;
+        }
+
+        #playlist li span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        #playlist li.selected {
+            background-color: lightgreen;
+        }
+
+        #video-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #008080;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="video-container">
+        <div id="player"></div>
+        <div id="video-title"></div>
+    </div>
+    <div id="playlist-container">
+        <ul id="playlist"></ul>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var apiKey = 'AIzaSyAkDovAGAdqCIZ1vGt81ZetlMPKOPW8fEI';
+        var playlistId = 'PLKHcFf5kmB6hSxdtNFJJARv94fqLG-G6s';
+        var player;
+        var currentVideoIndex = 0;
+        var playlist = [];
+
+        function onYouTubeIframeAPIReady() {
+            loadPlaylistItems('');
+        }
+
+        function loadPlaylistItems(pageToken) {
+            var apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&pageToken=${pageToken}&playlistId=${playlistId}&key=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    playlist = playlist.concat(data.items);
+
+                    if (data.nextPageToken) {
+                        loadPlaylistItems(data.nextPageToken);
+                    } else {
+                        createPlaylist();
+                    }
+                })
+                .catch(error => console.error('Error fetching playlist:', error));
+        }
+
+        function createPlaylist() {
+            var playlistElement = document.getElementById('playlist');
+
+            playlist.forEach((item, index) => {
+                var title = item.snippet.title;
+
+                var listItem = document.createElement('li');
+                listItem.innerHTML = `<span>${index + 1}</span>${title}`;
+                listItem.onclick = function () {
+                    playVideo(index, title);
+                };
+                playlistElement.appendChild(listItem);
+            });
+
+
+
+
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 1,
+                    'playlist': playlist.map(item => item.snippet.resourceId.videoId).join(',')
+                },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+            
+            selectListItem(0);
+        }
+
+        function playVideo(index, title) {
+            currentVideoIndex = index;
+            var videoId = playlist[currentVideoIndex].snippet.resourceId.videoId;
+            player.loadVideoById(videoId);
+            player.playVideo();
+            selectListItem(index);
+            updateVideoTitle(title);
+        }
+
+        function selectListItem(index) {
+            var playlistItems = document.querySelectorAll('#playlist li');
+            var selectedItem = playlistItems[index];
+
+            playlistItems.forEach(item => {
+                item.classList.remove('selected');
+            });
+
+            selectedItem.classList.add('selected');
+
+            selectedItem.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                currentVideoIndex++;
+                if (currentVideoIndex < playlist.length) {
+                    var nextTitle = playlist[currentVideoIndex].snippet.title;
+                    playVideo(currentVideoIndex, nextTitle);
+                }
+            }
+        }
+
+        function updateVideoTitle(title) {
+            var videoTitleElement = document.getElementById('video-title');
+            videoTitleElement.innerText = title;
+        }
+    </script>
+</body>
+
+</html>
