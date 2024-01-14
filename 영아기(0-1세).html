@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        #videoList {
+            overflow-y: auto;
+            max-height: 320px;
+            width: 320px;
+            /* Match the video width */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: videoCounter;
+            font-size: 14px;
+            /* Adjust the font size as needed */
+            margin-bottom: 20px;
+            /* Add margin between different video lists */
+            margin-left: 10px;
+        }
+
+        #videoList li {
+            margin-bottom: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #videoList li::before {
+            /*video count*/
+            /*content: counter(videoCounter);
+            counter-increment: videoCounter;*/
+            display: inline-block;
+            width: 20px;
+            /* Adjust the width as needed */
+            text-align: right;
+            margin-right: 5px;
+            color: #555;
+            /* Adjust the color as needed */
+        }
+
+        #videoList li.selected {
+            background-color: lightgreen;
+        }
+
+        .title_bold {
+            font-weight: bold;
+            text-align: center;
+            width: 320px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            /* Adjust the font size as needed */
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling links within the video list */
+        .video-list a {
+            color: inherit;
+            /* Use the default text color */
+            text-decoration: none;
+            /* Remove underline */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title_bold"> 우리 아이 잘 키우는 육아법_영아기(0-1세) </div>
+
+    <!--
+    <video id="mainVideo" width="320" height="240" controls autoplay>
+        <source src="http://zoneauth.vod.tomatopass.hscdn.com/realestate/int_01_sdy_231025_sd.mp4? + repeatedPart" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+-->
+
+    <!-- 우리 아이 잘 키우는 육아법_영아기(0-1세) -->
+    <ol id="videoList">
+        <ul class="video-list">
+            <!--
+            <li class="title_bold">우리 아이 잘 키우는 육아법_영아기(0-1세)</li>
+-->
+
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQ029zjk37isXZ&seek=true&start=&cc=false">1.
+                    아이를 처음 만나요</a></li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQ0qZyg8visCJn&seek=true&start=&cc=false">2.
+                    세상을 믿는 힘이 생기는 내 아이, 울음으로 표현해요</a></li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQ2qOjH2TFr9g&seek=true&start=&cc=false">3.
+                    아이의 식습관은 영아기부터</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQzyjVipuUn0oip&seek=true&start=&cc=false
+                    ">4.
+                    잘 자는 아이가 잘 큰다</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQyipz0HiptngHt&seek=true&start=&cc=false">5.
+                    건강과 위생은 친구</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQzXrh1cRc3gS&seek=true&start=&cc=false">6.
+                    내 아이의 첫 병원</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq1r1T2UV1hYQy5skPipk6ipIs&seek=true&start=&cc=false">7.
+                    아이와 편안하게 놀기</li>
+
+
+        </ul>
+    </ol>
+
+    <!--
+    <script>
+        function playVideo(videoURL, listItem) {
+            var mainVideo = document.getElementById('mainVideo');
+            mainVideo.src = videoURL;
+            mainVideo.load();
+            mainVideo.play();
+
+            // Remove 'selected' class from all list items
+            var listItems = document.querySelectorAll('#videoList li');
+            listItems.forEach(function (item) {
+                item.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked list item
+            listItem.classList.add('selected');
+        }
+    </script>
+
+    <script>
+        // Function to create and append links dynamically
+        function createLink(url) {
+        // Create a new link element
+        var linkElement = document.createElement('a');
+
+        // Set the href attribute with the provided URL
+        linkElement.href = url;
+
+        // Set link text or innerHTML as needed
+        linkElement.innerText = 'Link';
+
+        // Create a div to wrap the link for styling
+        var linkWrapper = document.createElement('div');
+        linkWrapper.appendChild(linkElement);
+
+        // Append the link to the container
+        document.getElementById('dynamicLinksContainer').appendChild(linkWrapper);
+        }
+
+        // Repeated part
+        var repeatedPart =
+        '%20%27SAAEJB073F891CB7D6AC52D698B8D1C0625F99F344469483CF01A57E328D311F354F09325EC73B77F49B7B7E33F15DB4453B3A050D40C6B85A957378E89ECEEE724F1165FCE083772EC5DC04FF5EC6CF2B6E4021982D09D9FE916E210E54A64B82A513C9C010DEC3D4A8D9655B1E42EC3D8E47A17A2128CB947C7DA68E67262127A9A5E5AADF92413A06375CB51FC72795980C';
+
+        // Example links with the repeated part
+        //var link1 = 'http://zoneauth.vod.tomatopass.hscdn.com/realestate/civil_01_pki_231023_sd.mp4?' + repeatedPart;
+        //var link2 = 'http://zoneauth.vod.tomatopass.hscdn.com/realestate/int_16_sdy_231108_sd.mp4?' + repeatedPart;
+        //var link3 = 'http://zoneauth.vod.tomatopass.hscdn.com/realestate/int_17_sdy_231108_sd.mp4?' + repeatedPart;
+
+        // Call the function to create links (you can call it with different links)
+        //createLink(link1);
+        //createLink(link2);
+        //createLink(link3);
+    </script>
+-->
+
+
+    <script>
+        function playVideo(videoURL, listItem) {
+            // Open the video in a new window
+            window.open(videoURL, '_blank');
+
+            // Remove 'selected' class from all list items
+            var listItems = document.querySelectorAll('.video-list li');
+            listItems.forEach(function (item) {
+                item.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked list item
+            listItem.classList.add('selected');
+
+            // Repeated part
+            var repeatedPart =
+                '%20%27SAAEJB073F891CB7D6AC52D698B8D1C0625F99F344469483CF01A57E328D311F354F09325EC73B77F49B7B7E33F15DB4453B3A050D40C6B85A957378E89ECEEE724F1165FCE083772EC5DC04FF5EC6CF2B6E4021982D09D9FE916E210E54A64B82A513C9C010DEC3D4A8D9655B1E42EC3D8E47A17A2128CB947C7DA68E67262127A9A5E5AADF92413A06375CB51FC72795980C';
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
