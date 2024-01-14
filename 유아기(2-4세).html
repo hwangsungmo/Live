@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        #videoList {
+            overflow-y: auto;
+            max-height: 320px;
+            width: 320px;
+            /* Match the video width */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: videoCounter;
+            font-size: 14px;
+            /* Adjust the font size as needed */
+            margin-bottom: 20px;
+            /* Add margin between different video lists */
+            margin-left: 10px;
+        }
+
+        #videoList li {
+            margin-bottom: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        #videoList li::before {
+            /*video count*/
+            /*content: counter(videoCounter);
+            counter-increment: videoCounter;*/
+            display: inline-block;
+            width: 20px;
+            /* Adjust the width as needed */
+            text-align: right;
+            margin-right: 5px;
+            color: #555;
+            /* Adjust the color as needed */
+        }
+
+        #videoList li.selected {
+            background-color: lightgreen;
+        }
+
+        .title_bold {
+            font-weight: bold;
+            text-align: center;
+            width: 320px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            /* Adjust the font size as needed */
+            margin-bottom: 10px;
+            margin-left: 0px;
+        }
+
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling links within the video list */
+        .video-list a {
+            color: inherit;
+            /* Use the default text color */
+            text-decoration: none;
+            /* Remove underline */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title_bold"> 우리 아이 잘 키우는 놀이육아법 유아기(만 2세-4세) </div>
+
+    <!--
+    <video id="mainVideo" width="320" height="240" controls autoplay>
+        <source src="http://zoneauth.vod.tomatopass.hscdn.com/realestate/int_01_sdy_231025_sd.mp4? + repeatedPart" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+-->
+
+    <!-- 우리 아이 잘 키우는 놀이육아법 유아기(만 2세-4세) -->
+    <ol id="videoList">
+        <ul class="video-list">
+            <!--
+            <li class="title_bold">우리 아이 잘 키우는 놀이육아법 유아기(만 2세-4세)</li>
+-->
+
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3CvOszt90Ll67UCYIIDWg7&seek=true&start=&cc=false">1.
+                    유아기 전반적 특징과 기질</a></li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6SislyfbN1PCyGk8&seek=true&start=&cc=false">2.
+                    놀이만 보아도 아이 마음을 알 수 있다</a></li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6Sisl0Tps57rmGVy&seek=true&start=&cc=false">3.
+                    아이의 마음을 읽어주는 정서놀이</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6SislzXrh1cRc3gS&seek=true&start=&cc=false
+                    ">4.
+                    우리 아이 자존감을 키워주려면?</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6SislipU4uFgwju5x&seek=true&start=&cc=false">5.
+                    불안을 낮춰주는 놀이</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6SislyO8viiHAYG31&seek=true&start=&cc=false">6.
+                    산만한 아이를 위한 놀이와 놀이 태도</li>
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6Sisliso9SbLnEo28&seek=true&start=&cc=false">7.
+                    떼쓰는 아이에게도 이유가 있다</li>
+
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6Sisly4rGaz4D7ax&seek=true&start=&cc=false">7.
+                    작은 자극에도 예민한 아이들</li>
+
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6Sisl4qPtzoFKDNR&seek=true&start=&cc=false
+                    ">7.
+                    재잘재잘 언어놀이</li>
+
+            <li><a
+                    href="https://play.wecandeo.com/video/v/?key=BOKNS9AQWrGipkiiUUJHXipHJbYf7aRy5Uz9iivH0fbYeq3I0naSt6Sisl2vHQM6TsuGL&seek=true&start=&cc=false">7.
+                    유아기 놀이육아 Q&A</li>
+
+
+        </ul>
+    </ol>
+
+    <!--
+    <script>
+        function playVideo(videoURL, listItem) {
+            var mainVideo = document.getElementById('mainVideo');
+            mainVideo.src = videoURL;
+            mainVideo.load();
+            mainVideo.play();
+
+            // Remove 'selected' class from all list items
+            var listItems = document.querySelectorAll('#videoList li');
+            listItems.forEach(function (item) {
+                item.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked list item
+            listItem.classList.add('selected');
+        }
+    </script>
+
+    <script>
+        // Function to create and append links dynamically
+        function createLink(url) {
+        // Create a new link element
+        var linkElement = document.createElement('a');
+
+        // Set the href attribute with the provided URL
+        linkElement.href = url;
+
+        // Set link text or innerHTML as needed
+        linkElement.innerText = 'Link';
+
+        // Create a div to wrap the link for styling
+        var linkWrapper = document.createElement('div');
+        linkWrapper.appendChild(linkElement);
+
+        // Append the link to the container
+        document.getElementById('dynamicLinksContainer').appendChild(linkWrapper);
+        }
+
+        // Repeated part
+        var repeatedPart =
+        '%20%27SAAEJB073F891CB7D6AC52D698B8D1C0625F99F344469483CF01A57E328D311F354F09325EC73B77F49B7B7E33F15DB4453B3A050D40C6B85A957378E89ECEEE724F1165FCE083772EC5DC04FF5EC6CF2B6E4021982D09D9FE916E210E54A64B82A513C9C010DEC3D4A8D9655B1E42EC3D8E47A17A2128CB947C7DA68E67262127A9A5E5AADF92413A06375CB51FC72795980C';
+
+        // Example links with the repeated part
+        //var link1 = 'http://zoneauth.vod.tomatopass.hscdn.com/realestate/civil_01_pki_231023_sd.mp4?' + repeatedPart;
+        //var link2 = 'http://zoneauth.vod.tomatopass.hscdn.com/realestate/int_16_sdy_231108_sd.mp4?' + repeatedPart;
+        //var link3 = 'http://zoneauth.vod.tomatopass.hscdn.com/realestate/int_17_sdy_231108_sd.mp4?' + repeatedPart;
+
+        // Call the function to create links (you can call it with different links)
+        //createLink(link1);
+        //createLink(link2);
+        //createLink(link3);
+    </script>
+-->
+
+
+    <script>
+        function playVideo(videoURL, listItem) {
+            // Open the video in a new window
+            window.open(videoURL, '_blank');
+
+            // Remove 'selected' class from all list items
+            var listItems = document.querySelectorAll('.video-list li');
+            listItems.forEach(function (item) {
+                item.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked list item
+            listItem.classList.add('selected');
+
+            // Repeated part
+            var repeatedPart =
+                '%20%27SAAEJB073F891CB7D6AC52D698B8D1C0625F99F344469483CF01A57E328D311F354F09325EC73B77F49B7B7E33F15DB4453B3A050D40C6B85A957378E89ECEEE724F1165FCE083772EC5DC04FF5EC6CF2B6E4021982D09D9FE916E210E54A64B82A513C9C010DEC3D4A8D9655B1E42EC3D8E47A17A2128CB947C7DA68E67262127A9A5E5AADF92413A06375CB51FC72795980C';
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
