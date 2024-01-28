@@ -16,14 +16,13 @@
         }
 
         #player {
-            max-width: 640px;
-            margin-bottom: 20px;
+            max-width: 480px;
         }
 
         #playlist-container {
+            max-width: 480px;
             overflow-y: auto;
-            max-height: 300px;
-            width: 640px;
+            max-height: 200px;
             /* Match the video width */
             
         }
@@ -40,6 +39,7 @@
             margin-bottom: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
+            padding: 5px;
             
         }
 
@@ -51,6 +51,19 @@
         #videoId li span {
             font-weight: bold;
             margin-right: 10px;
+        }
+        
+        .preview-container {
+            width: 40px;
+            /* Adjust the width as needed */
+            height: 30px;
+            /* Adjust the height as needed */
+            margin-right: 10px;
+        }
+
+        .preview-video {
+            width: 100%;
+            height: 100%;
         }
 
         #videoId li.selected {
@@ -101,17 +114,19 @@
             'nLNs_XmWOyE'
         ];
 
+        var player;
         var playlist = [];
         var currentVideoIndex = 0;
 
         function onYouTubeIframeAPIReady() {
+            var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
             player = new YT.Player('player', {
-                height: '390',
-                width: '640',
+                height: isMobile ? '240' : '300',
+                width: isMobile ? '320' : '480',
                 playerVars: {
                     'autoplay': 1,
                     'controls': 1,
-                    'playlist': videoIds.join(',')
+                    'playlist': playlist.map(item => item.snippet.resourceId.videoId).join(',')
                 },
                 events: {
                     'onReady': onPlayerReady,
@@ -203,6 +218,15 @@
                 });
             }
         }
+
+                // Additional code for mobile detection
+        function handleResize() {
+            var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+            player.setSize(isMobile ? '320' : '480', isMobile ? '240' : '300');
+        }
+
+        // Add an event listener for window resize
+        window.addEventListener('resize', handleResize);
     </script>
 </body>
 
