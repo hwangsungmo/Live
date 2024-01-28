@@ -114,7 +114,7 @@
         }
 
 
-            button.large7 img {
+        button.large7 img {
             padding-top: 10px;
             width: 100%;
             height: auto;
@@ -122,6 +122,18 @@
             /* max-height: 100px; */
             border-radius: 5px;
         }
+
+
+        button.large8 img {
+            padding-top: 0px;
+            width: 100%;
+            height: auto;
+            /*padding: 25px;*/
+            /* max-height: 100px; */
+            border-radius: 5px;
+        }
+
+
 
         button span {
             margin-top: 10px;
@@ -133,6 +145,51 @@
 
         button:hover {
             border: 3px solid #22B14C;
+        }
+
+       /* .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+        }*/
+
+        .btn:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            background-color: transparent;
+            background-image: none;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn:hover {
+            text-decoration: none;
         }
     </style>
 
@@ -299,7 +356,7 @@
             }
         </script>
 
-        
+
         <!-- Cuquin -->
         <button class="large5" onclick="loadAnotherHTML1()">
             <img src="https://yt3.googleusercontent.com/0mFPUt31QLiDVHSW4go0o5GWxi4VGlNf_Ph-qdiiQS2vxKXjQ1aoUJk6TRepJeeVoSAMQ6uwNg=s176-c-k-c0x00ffffff-no-rj"
@@ -336,7 +393,7 @@
             <div class="chInfo">taoworld</div>
         </button>
 
-            <!-- 새 창에서 열림(외부 링크) -->
+        <!-- 새 창에서 열림(외부 링크) -->
         <script>
             function loadAnotherHTML5() {
                 // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
@@ -344,7 +401,7 @@
             }
         </script>
 
-            <!-- 같은 창에서 열림(외부 링크) -->
+        <!-- 같은 창에서 열림(외부 링크) -->
         <!--
         <script>
             function loadAnotherHTML5() {
@@ -364,14 +421,14 @@
 -->
 
         <!-- 헤이지니(Hey Jini) 지니와 상황극 놀이(Pretend Play) -->
-        <button class="large5" onclick="HeyJini()">
+        <button class="large5" onclick="헤이지니()">
             <img src="https://yt3.googleusercontent.com/ytc/AIf8zZSB_nm_3M48SQM8HdbeT0hHgR2MS3XbswshWTXq0Q=s176-c-k-c0x00ffffff-no-rj"
                 alt="헤이지니 Logo">
             <div class="chInfo">헤이지니</div>
         </button>
 
         <script>
-            function HeyJini() {
+            function 헤이지니() {
                 // Replace 'path/to/your/another.html' with the actual path to the HTML file you want to load
                 window.location.href = 'playlist_헤이지니.html';
             }
@@ -394,7 +451,7 @@
             document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBD2000001BN.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/AIf8zZQyB6J3vwyiYKGH2BPMoqqmwnOrZhIpIWivmOM5=s900-c-k-c0x00ffffff-no-rj"alt="뽀요TV Logo"><div class="chInfo">뽀요TV</div></button>');
         </script>
 
-        
+
         <!-- 핑크퐁(인기 동요・동화) 실시간(youtube) -->
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/fBrmM7AcL-o?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/AIf8zZSgjlQU1IlPkuhXr-LAsF-S4aHoyZX2FJjHx35DwA=s176-c-k-c0x00ffffff-no-rj"alt="핑크퐁 Logo"><div class="chInfo">핑크퐁</div></button>');
@@ -430,7 +487,7 @@
         </script>
 
 
-         <!--  Animax 반지의 비밀일기 -->
+        <!--  Animax 반지의 비밀일기 -->
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBC40000010R.m3u8\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/jRm8c2td_Zhpv5wxoEUdSZC5-wamhvnqjvWAFkLIG2696j_OIAusn6T8AEzDEHwTkN_TrL3D4K0=s900-c-k-c0x00ffffff-no-rj"alt="반지의 비밀일기 Logo"><div class="chInfo">반지비밀일기</div></button>');
         </script>
@@ -477,9 +534,14 @@
 
 
 
-
+        <!--  불보고 멍때리기 -->
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/Rc6xBsiI6y8?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/bZ0voE8l7y0K3CBGcR4t3ARpoTTyqwCWESM5rqbxM1dvzBd22N4PZ-bcizA2bvJ3t-AYrZltwg=s176-c-k-c0x00ffffff-no-rj"alt="불멍 Logo"><div class="chInfo">불멍</div></button>');
+        </script>
+
+        <!--  물보고 멍때리기_아쿠아플라넷 -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UCRzuyj_qGaQULd6qX1pwITw&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="한화아쿠아플라넷.png"alt="아쿠아플라넷 Logo"><div class="chInfo">아쿠아플라넷</div></button>');
         </script>
 
 
@@ -551,7 +613,7 @@
 
 
         <!-- 미국주식에 미치다 -->
-<!--
+        <!--
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/FPVxSch2PCM?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/ytc/APkrFKb5D_B1gPat4_XoSMYmxE253RR0WtrSVGWhtLw6dg=s176-c-k-c0x00ffffff-no-rj"alt="미주미 Logo"><div class="chInfo">미주미</div></button>');
         </script>
@@ -573,7 +635,7 @@
 
 
         <script>
-            document.writeln('<button class="large5" onclick="window.open(\'https://youtube.com/@3protv?si=nDO2OhxcLXFKNLVe\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/anT2TJY_rss5WExUZ8QFW-G4z-3paeISZx5urUY_MRuX7OWNFPgd8tmT0xfJugn6utufJvegJA=s176-c-k-c0x00ffffff-no-rj"alt="삼프로TV Logo"><div class="chInfo">삼프로TV</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://www.youtube.com/embed/WkUFOMOSSmo?autoplay=1\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/anT2TJY_rss5WExUZ8QFW-G4z-3paeISZx5urUY_MRuX7OWNFPgd8tmT0xfJugn6utufJvegJA=s176-c-k-c0x00ffffff-no-rj"alt="삼프로TV Logo"><div class="chInfo">삼프로TV</div></button>');
         </script>
 
         <!-- Starcraft 다시보기 -->
@@ -653,10 +715,6 @@
             document.writeln('<button class="large3" onclick="window.open(\'https://tv.kakao.com/channel/2835210\',\'_blank\'); return false;"><img src="https://yt3.googleusercontent.com/CgZucPKsxLG4zepRFMo2twJf1xwQ6-ge3lv894B9NkS7P2I-uvKB4So7ufSCYKPtaZ7-eYuEAQ=s900-c-k-c0x00ffffff-no-rj"alt="STN SPORTS Logo"><div class="chInfo">STN SPORTS</div></button>');
         </script>
 
-
-        <script>
-            document.writeln('<button class="large" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UCRzuyj_qGaQULd6qX1pwITw&rel=0&autoplay=1\',\'_blank\'); return false;"><img src="한화아쿠아플라넷.png"alt="아쿠아플라넷 Logo"><div class="chInfo">아쿠아플라넷</div></button>');
-        </script>
 
         <!-- SPOTV, 고화질 -->
         <script>
@@ -1133,7 +1191,7 @@
 
 
         <button class="large" onclick="popKBSNews()">
-            <img src="https://blog.kakaocdn.net/dn/ta5zY/btqPTDa0dXd/BkYwSXTSbKDpU9XydeVR00/img.png"
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/KBS_logo.svg/1920px-KBS_logo.svg.png"
                 alt="KBS뉴스 Logo">
             <div class="chInfo">KBS뉴스</div>
         </button>
@@ -1143,12 +1201,48 @@
             document.writeln('<button class="large" onclick="popKBS(\'81\');"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/KBS_logo.svg/1920px-KBS_logo.svg.png"alt="KBS NEWS D Logo"><div class="chInfo">KBS NEWS D</div></button>');
         </script>
 
-
-
+        <!--  MBC every1(에브리원) -->
         <script>
-            document.writeln('<button class="large1" onclick="window.open(\'https://www.youtube.com/embed/q-Wv4Pvt-5A?autoplay=1\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Munhwa_Broadcasting_Company.svg/512px-Munhwa_Broadcasting_Company.svg.png"alt="MBC뉴스 Logo"><div class="chInfo">MBC뉴스</div></button>');
+            document.writeln('<button class="large1" onclick="window.open(\'https://tistory1.daumcdn.net/tistory/2864485/skin/images/CATV_223_D2C739D6.m3u8\',\'_blank\'); return false;"><img src="https://static.wikia.nocookie.net/logopedia/images/0/0d/MBC_Every_1_2022_%28Vertical%29.svg/revision/latest/scale-to-width-down/250?cb=20220426080324"alt="MBC_every1 Logo"><div class="chInfo">MBC_every1</div></button>');
         </script>
 
+        <!--  MBC Drama -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://tistory1.daumcdn.net/tistory/2864485/skin/images/CATV_222_FDACF704.m3u8\',\'_blank\'); return false;"><img src="https://blog.kakaocdn.net/dn/Z35OK/btqDOjBoLo8/jEcJTBPx83AYEFPaO72e50/img.jpg"alt="MBC_Drama Logo"><div class="chInfo">MBC_Drama</div></button>');
+        </script>
+
+        <!--  MBC Net -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'http://mytv.dothome.co.kr/ch/catv/28.php/.m3u8\',\'_blank\'); return false;"><img src="mbcnet.jpg"alt="MBC_Net Logo"><div class="chInfo">MBC_Net</div></button>');
+        </script>
+
+        <!--  MBC뉴스실시간(Youtube) -->
+        <script>
+            document.writeln('<button class="large1" onclick="window.open(\'https://www.youtube.com/embed/q-Wv4Pvt-5A?autoplay=1\',\'_blank\'); return false;"><img src="https://blog.kakaocdn.net/dn/ta5zY/btqPTDa0dXd/BkYwSXTSbKDpU9XydeVR00/img.png"alt="MBC뉴스 Logo"><div class="chInfo">MBC뉴스</div></button>');
+        </script>
+
+
+        <!--  SBS Plus -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://tinyurl.com/yc4p884k\',\'_blank\'); return false;"><img src="https://i.namu.wiki/i/xqrMbpq5gUvqLafeRSD_hClvbUI_kL3EEe1d-f_eBnJhR68CHYhP-j-qaT-XS5P2gK2stU7W-XrY4V4nRlXgpA.webp"alt="SBS Plus Logo"><div class="chInfo">SBS Plus</div></button>');
+        </script>
+
+        <!--  SBS M -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://tinyurl.com/3an9wbe8\',\'_blank\'); return false;"><img src="https://i.namu.wiki/i/YEM_2SwCVoQHaQsx7UdIyugBsuIjJh-WdofIhKWhpyBLa5vQRaoUsdwgfLmlvN7Sa-07Opz1G6S_5fH-X6Aqbw.svg"alt="SBS M Logo"><div class="chInfo">SBS M</div></button>');
+        </script>
+
+        <!--  SBS Biz -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://tinyurl.com/44yfc968\',\'_blank\'); return false;"><img src="https://biz.sbs.co.kr/img/logo.png"alt="SBS Biz Logo"><div class="chInfo">SBS Biz</div></button>');
+        </script>
+
+        <!--  SBS funE -->
+        <script>
+            document.writeln('<button class="large" onclick="window.open(\'https://tinyurl.com/tpddcwe6\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/SBS_funE_logo_2018.svg/2560px-SBS_funE_logo_2018.svg.png"alt="SBS funE Logo"><div class="chInfo">SBS funE</div></button>');
+        </script>
+
+        <!--  SBS뉴스실시간(Direct) -->
         <script>
             document.writeln('<button class="large2" onclick="popSBSNews();"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Seoul_Broadcasting_System_logo.svg"alt="SBS뉴스 Logo"><div class="chInfo">SBS뉴스</div></button>');        
         </script>
@@ -1215,22 +1309,19 @@
 
         <!--  KBS 1FM(Radio) -->
         <button class="large7" onclick="popKBS('24')">
-            <img src="KBS_RADIO.jpg"
-                alt="KBS1FM Logo">
+            <img src="KBS_RADIO.jpg" alt="KBS1FM Logo">
             <div class="chInfo">KBS1FM</div>
         </button>
 
         <!--  KBS 2FM(Radio) -->
         <button class="large7" onclick="popKBS('25')">
-            <img src="KBS_RADIO.jpg"
-                alt="KBS2FM Logo">
+            <img src="KBS_RADIO.jpg" alt="KBS2FM Logo">
             <div class="chInfo">KBS2FM</div>
         </button>
 
         <!--  KBS 1라디오(Radio) -->
         <button class="large7" onclick="popKBS('21')">
-            <img src="KBS_RADIO.jpg"
-                alt="KBS1 Logo">
+            <img src="KBS_RADIO.jpg" alt="KBS1 Logo">
             <div class="chInfo">KBS1</div>
         </button>
 
@@ -1548,17 +1639,17 @@
 
 
 
-        <!-- PLAYY 크리스마스특집 -->
+        <!-- PLAYY영화1 -->
 
         <script>
-            document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBD2700008TZ.m3u8\',\'_blank\'); return false;"><img src="https://us-image.samsungtvplus.com/stretch?url=https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/KRBD2700008TZ_20231213T033742SQUARE.png_20231213033743.png&w=140&h=140"alt="PLAYY특집 Logo"><div class="chInfo">PLAYY특집</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBD2700008TZ.m3u8\',\'_blank\'); return false;"><img src="https://us-image.samsungtvplus.com/stretch?url=https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/KRBD2700008TZ_20231213T033742SQUARE.png_20231213033743.png&w=140&h=140"alt="PLAYY영화1 Logo"><div class="chInfo">PLAYY영화1</div></button>');
         </script>
 
 
-        <!-- PLAYY영화 -->
+        <!-- PLAYY영화2 -->
 
         <script>
-            document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBD2700007S0.m3u8\',\'_blank\'); return false;"><img src="https://us-image.samsungtvplus.com/stretch?url=https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/KRBD2700007S0_20230913T010340SQUARE.png_20230913010341.png&w=140&h=140"alt="PLAYY영화 Logo"><div class="chInfo">PLAYY영화</div></button>');
+            document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBD2700007S0.m3u8\',\'_blank\'); return false;"><img src="https://us-image.samsungtvplus.com/stretch?url=https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/KRBD2700007S0_20230913T010340SQUARE.png_20230913010341.png&w=140&h=140"alt="PLAYY영화2 Logo"><div class="chInfo">PLAYY영화2</div></button>');
         </script>
 
 
@@ -1566,6 +1657,27 @@
 
         <script>
             document.writeln('<button class="large5" onclick="window.open(\'https://i.mjh.nz/SamsungTVPlus/KRBD26000011V.m3u8\',\'_blank\'); return false;"><img src="https://us-image.samsungtvplus.com/stretch?url=https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/KRBD26000011V_20230809T021233SQUARE.png_20230809021234.png&w=140&h=140"alt="CINE21+ Logo"><div class="chInfo">CINE21+</div></button>');
+        </script>
+
+
+        <!-- 한국영화1(영어 자막) -->
+
+        <script>
+            document.writeln('<button class="large8" onclick="window.open(\'https://stream.ads.ottera.tv/playlist.m3u8?network_id=595\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/255px-Flag_of_South_Korea.svg.png"alt="한국영화1 Logo"><div class="chInfo">한국영화1</div></button>');
+        </script>
+
+
+        <!-- 한국영화2(영어 자막) -->
+
+        <script>
+            document.writeln('<button class="large8" onclick="window.open(\'https://stream.ads.ottera.tv/playlist.m3u8?network_id=743\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/255px-Flag_of_South_Korea.svg.png"alt="한국영화2 Logo"><div class="chInfo">한국영화2</div></button>');
+        </script>
+
+
+        <!-- 한국영화3(영어 자막) -->
+
+        <script>
+            document.writeln('<button class="large8" onclick="window.open(\'https://stream.ads.ottera.tv/playlist.m3u8?network_id=742\',\'_blank\'); return false;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/255px-Flag_of_South_Korea.svg.png"alt="한국영화3 Logo"><div class="chInfo">한국영화3</div></button>');
         </script>
 
 
