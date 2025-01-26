@@ -1,0 +1,27 @@
+﻿(function() {
+document.writeln('<table style="background:#CCCCCC;border-spacing:1px" cellspacing="1"><tbody><tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'http://gstv-gsshop.gsshop.com/gsshop_hd/_definst_/gsshop_hd.stream/playlist.m3u8\',\'_blank\'); return false;">GS샵</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'http://gstv-myshop.gsshop.com/myshop_hd/_definst_/myshop_hd.stream/playlist.m3u8\',\'_blank\'); return false;">GS마이샵</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://livejj.hyundaihmall.com:8443/live/ngrp:hmall.stream_pc/playlist.m3u8\',\'_blank\'); return false;">현대홈쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://dtvstreaming.hyundaihmall.com/newcjp3/_definst_/newcjpstream.smil/playlist.m3u8\',\'_blank\'); return false;">현대홈쇼핑+샵</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dt4\',\'_blank\'); return false;">NS홈쇼핑</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('<tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'http://live-ch1.cjonstyle.net/cjmalllive/_definst_/stream2/playlist.m3u8\',\'_blank\'); return false;">CJ온스타일</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'http://live-ch2.cjmall.net/cjosplus/_definst_/live2/playlist.m3u8\',\'_blank\'); return false;">CJ온스타일+</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dt5\',\'_blank\'); return false;">롯데홈쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dt6\',\'_blank\'); return false;">롯데OneTV</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dt7\',\'_blank\'); return false;">NS Shop+</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('<tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'http://liveout.catenoid.net/live-05-wshopping/wshopping_1500k/playlist.m3u8\',\'_blank\'); return false;">W쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dt8\',\'_blank\'); return false;">신세계쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dt9\',\'_blank\'); return false;">쇼핑엔티</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'http://etv.publichs.com/live5.stream/playlist.m3u8\',\'_blank\'); return false;">공영쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dtA\',\'_blank\'); return false;">SK스토아</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('<tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://livetv.kshop.co.kr/klive/_definst_/smil:klive.smil/playlist.m3u8\',\'_blank\'); return false;">KT알파 쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://s30.qtcdn.co.kr/media/liveM3U8/idx/484074138/enc/1790577012/playlist.m3u8\',\'_blank\'); return false;">홈앤쇼핑</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/live_stream?channel=UCQfwfsi5VrQ8yKZ-UWmAEFg&rel=0&autoplay=1\',\'_blank\'); return false;">FRANCE 24</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/iEpJwprxDdk?autoplay=1\',\'_blank\'); return false;">Bloomberg</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8\',\'_blank\'); return false;">CBSN</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('</tbody></table>');
+})();

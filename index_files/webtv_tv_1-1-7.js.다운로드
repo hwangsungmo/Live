@@ -1,0 +1,21 @@
+﻿(function() {
+document.writeln('<table style="background:#CCCCCC;border-spacing:1px" cellspacing="1"><tbody><tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://n24-cdn-live.ntv.co.jp/ch01/index.m3u8\',\'_blank\'); return false;">NTV News 24</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://cgntvlive-944.acs.wecandeo.com/ms/2850/944/index.m3u8\',\'_blank\'); return false;">CGNTV Japan</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/TUd7JORZeWo?autoplay=1\',\'_blank\'); return false;">Shibuya Crossing</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/ohI356mwBp8?autoplay=1\',\'_blank\'); return false;">TBS NEWS DIG</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/ans\',\'_blank\'); return false;">NHK WORLD</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('<tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/coYw-eVU0Ks?autoplay=1\',\'_blank\'); return false;">ANN</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/-C6FE2m7kX8?autoplay=1\',\'_blank\'); return false;">NBN</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/d8CrKBU99Hg?autoplay=1\',\'_blank\'); return false;">HTB</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dtB\',\'_blank\'); return false;">Shop Channel</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dtC\',\'_blank\'); return false;">QVC</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('<tr style="background:#FFFFFF"><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://www.youtube.com/embed/YDvsBbKfLPA?autoplay=1\',\'_blank\'); return false;">Sky News</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/ant\',\'_blank\'); return false;">Kpop TV Play</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://bitcdn-kronehit.bitmovin.com/v2/hls/playlist.m3u8\',\'_blank\'); return false;">Kronehit TV</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://classicarts.akamaized.net/hls/live/1024257/CAS/master.m3u8\',\'_blank\'); return false;">Classic Arts Showcase</a></span></p>');
+document.writeln('</td><td><p><span style="font-size: 18px;"><a href="#none" onclick="window.open(\'https://xzx.kr/dtD\',\'_blank\'); return false;">Vevo ‘70s</a></span></p>');
+document.writeln('</td></tr>');
+document.writeln('</tbody></table>');
+})();
