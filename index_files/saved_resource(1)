@@ -1,0 +1,43 @@
+
+var ftGUID_7928090="6235013CDF1EBD";
+var ftConfID_7928090="0";
+var ftParams_7928090="ftOBA=1&ft_domain=webtv.dothome.co.kr&ft_ifb=1&ft_agentEnv=0&ft_referrer=http://webtv.dothome.co.kr/index.php;http%3A%2F%2Fwebtv.dothome.co.kr%2Findex.php&us_privacy=${US_PRIVACY}&site_url=http://webtv.dothome.co.kr/index.php&pub_id=1&sup_platform=1&cachebuster=794882.1165865811&ft_keyword=DV360CampID:__20988598703__&ft_section=DV360CampID:20988598703&ft_partnerimpid=ABAjH0gPvgWdnNjWYhkpCoiTX17c";
+var ftKeyword_7928090="";
+var ftCustom_7928090="";
+var ftSection_7928090="DV360CampID:20988598703";
+var ftSegment_7928090="";
+var ftSegmentList_7928090=[];
+var ftRuleMatch_7928090="0";
+var ftTimestamp_7928090="1737852065";
+var ftGeoC2_7928090="kr";
+var ftGeoState_7928090="26";
+var ftGeoCity_7928090="u-dong";
+var ftISP_7928090="lg powercomm";
+var ftSpeed_7928090="broadband";
+var ftConnType_7928090="wifi";
+var ftDMA_7928090="410033";
+var ftLong_7928090="129.14";
+var ftLat_7928090="35.16";
+var ftPostal_7928090="48091";
+var ftTimeZone_7928090="+900";
+var ftMobileCarrier_7928090="";
+var ftImp7928090 = {};
+ftImp7928090.privacy = "x";
+ftImp7928090.guidAge = "0";
+ftImp7928090.impID = "ABB71607-5031-9963-2C0E-A07488C9F928";
+ftImp7928090.duid = "FT:6235013CDF1EBD";
+
+ftImp7928090.ft_tpplid = "";
+ftImp7928090.ft_c = {};
+ftImp7928090.gdpr = "";
+ftImp7928090.gdpr_consent = "";
+ftImp7928090.gdpr_pd = "";
+ftImp7928090.oob_consent = "";
+ftImp7928090.gdprStoredConsent = "";
+ftImp7928090.us_privacy = "!!US_PRIVACY!";
+ftImp7928090.gpc = "";
+
+ftImp7928090.jsAppend = "1";
+var ftCreativeId_7928090 = "4707524";
+(function(){var tag=document.getElementById("ft_servedby_7928090")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m7928090";js.setAttribute("name","ftscript_m7928090");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("7928090");
+

@@ -1,0 +1,233 @@
+
+<!-- saved from url=(0045)https://cdn.mediago.io/js/interest_group.html -->
+<html lang="en" style="user-select: auto !important;"><head style="user-select: auto !important;"><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+        <!-- Chrome origin trial token -->
+        <!-- &#65533;싪퓝&#65533;닸렏溫양쉰meta訝띸뵟&#65533;덌펽&#65533;잌썱&#65533;ょ윥 -->
+        <meta http-equiv="origin-trial" content="A7J/zKtS7Hsph6itQaA2r5SBTtC3uc4oScABQLufiLlqEQWr5O3/iQf3BLnF6J/UtumeRg8NEmHCu2wd7Tkt4AcAAACAeyJvcmlnaW4iOiJodHRwczovL21lZGlhZ28uaW86NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=" style="user-select: auto !important;">
+        <meta http-equiv="origin-trial" content="A0MT6XNKno63xkeDj6OjNq5NfeqgZgHBcH8VpgA7Ks8c1caAHFox2Bia19pl04nCAkIaWzb1oD6cfcDMuyBvrAgAAACEeyJvcmlnaW4iOiJodHRwczovL2Nkbi5tZWRpYWdvLmlvOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9" style="user-select: auto !important;">
+    <meta http-equiv="origin-trial" content="A0MT6XNKno63xkeDj6OjNq5NfeqgZgHBcH8VpgA7Ks8c1caAHFox2Bia19pl04nCAkIaWzb1oD6cfcDMuyBvrAgAAACEeyJvcmlnaW4iOiJodHRwczovL2Nkbi5tZWRpYWdvLmlvOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9" style="user-select: auto !important;"><meta http-equiv="origin-trial" content="A7J/zKtS7Hsph6itQaA2r5SBTtC3uc4oScABQLufiLlqEQWr5O3/iQf3BLnF6J/UtumeRg8NEmHCu2wd7Tkt4AcAAACAeyJvcmlnaW4iOiJodHRwczovL21lZGlhZ28uaW86NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=" style="user-select: auto !important;"></head>
+    <body style="user-select: auto !important;">
+        <script style="user-select: auto !important;">
+            /**
+             * &#65533;방뜮url&#65533;귝빊&#65533;곁퍍&#65533;똵rl&#65533;띸&#65533;&#65533;룟룚url
+             * @param  {Object} param &#65533;귝빊&#65533;곁퍍
+             * @param  {string} url   url&#65533;띸&#65533;
+             * @return {string} url&#65533;뽬&#65533;끻뢿&#65533;곤펷躍&#65533;?竊됧춻寧╊림
+             */
+            function getUrlStr(param, url = '') {
+                if (typeof param !== 'object') {
+                    return url;
+                } else {
+                    function parse(obj) {
+                        let result = [];
+                        let keys = Object.keys(obj);
+
+                        for (let key of keys) {
+                            result.push(`${key}=${obj[key]}`);
+                        }
+                        return result;
+                    }
+                    let paramArr = parse(param);
+                    let paramStr = paramArr.join('&');
+                    let hashIndex = url.indexOf('#');
+                    let urlPrefix = url;
+                    let urlHash = '';
+
+                    if (hashIndex !== -1) {
+                        urlPrefix = url.slice(0, hashIndex);
+                        urlHash = url.slice(hashIndex);
+                    }
+
+                    if (paramStr) {
+                        if (urlPrefix && urlPrefix.indexOf('?') !== -1) {
+                            urlPrefix += '&' + paramStr;
+                        } else {
+                            urlPrefix += '?' + paramStr;
+                        }
+                    }
+                    return urlPrefix + urlHash;
+                }
+            }
+            /**
+             * &#65533;썲쑑窈드댆渦얕옙甕&#65533;
+             */
+            function trackPrivacySandbox(tn, ext) {
+                let trackUrl = getUrlStr(
+                    {
+                        app: 'PRIVACY_SANDBOX',
+                        tn: tn,
+                        trackingid: '',
+                        mguid: '',
+                        ext: JSON.stringify(ext)
+                    },
+                    'https://trace.mediago.io/ju/log/c'
+                );
+
+                track(trackUrl);
+            }
+            /**
+             * 窯꾢뒥饔썲쎗&#65533;&#65533;
+             * @param  {string} url &#65533;양뎴url
+             */
+            function trackByImage(url) {
+                let img = new Image();
+
+                img.src = url;
+                img.style.display = 'none';
+                img.style.visibility = 'hidden';
+                img.width = 0;
+                img.height = 0;
+                document.body.appendChild(img);
+            }
+            /**
+             * 訝딀뒫竊뚥폍&#65533;덄뵪sendBeacon
+             * @param {string} url &#65533;얏렏
+             */
+            function track(url) {
+                if (window.navigator.sendBeacon) {
+                    window.navigator.sendBeacon(url);
+                } else {
+                    trackByImage(url);
+                }
+            }
+
+            /**
+             * &#65533;룟룚topics岳→겘
+             */
+            function getTopicsInfo() {
+                function ignoreAsyncResult(x) {}
+
+                // report topics info
+                function handleTopics(result) {
+                    console.log('topicIds origin result:', result);
+                    try {
+                        if (Array.isArray(result)) {
+                            var topicIds = result.map(function (topic) {
+                                return topic.topic;
+                            });
+                            // todo report topics enable percent
+                            console.log('topicIds:', topicIds);
+                        }
+                    } catch (e) {}
+                }
+
+                // &#65533;쇔&#65533;&#65533;㎩닩&#65533;&#65533;
+                if (
+                    'browsingTopics' in document &&
+                    document.featurePolicy &&
+                    document.featurePolicy.allowsFeature('browsing-topics')
+                ) {
+                    // document.browsingTopics().then(handleTopics, ignoreAsyncResult);
+                    return document.browsingTopics();
+                } else {
+                    // 訝띶끉若&#65533;
+                    return false;
+                }
+            }
+
+            /**
+             * 曆삣뒥meta
+             */
+            function addOriginTrialMeta(content) {
+                try {
+                    var meta = document.createElement('meta');
+                    meta.httpEquiv = 'origin-trial';
+                    meta.content = content;
+                    document.head.append(meta);
+                } catch (e) {}
+            }
+
+            /**
+             * 曆삣뒥&#65533;닺땃瀯&#65533;
+             */
+            function joinAdInterestGroup() {
+                if (!navigator.joinAdInterestGroup) {
+                    console.log('No fledge for you!');
+                    return false;
+                } else {
+                    // &#65533;귝빊鰲ｉ뇢竊쉎ttps://developer.chrome.com/docs/privacy-sandbox/fledge-api/interest-groups/
+                    var ig = {
+                        owner: 'https://cdn.mediago.io',
+                        name: 'mediagoTest',
+                        // biddingLogicUrl: 'https://cdn.mediago.io/js/test/empty.js',
+                        // trustedBiddingSignalsUrl: 'https://cdn.mediago.io/js/test/empty.js',
+                        // trustedBiddingSignalsKeys: ['mediago_test_signal_key'],
+                        // userBiddingSignals: {
+                        //     trustedBiddingSignalsVersion: 1,
+                        //     userBiddingSignalsVersion: 1,
+                        //     uid: 'aaa'
+                        // },
+                        // updateUrl: 'https://cdn.mediago.io/js/test/empty.js',
+                        // ads: [
+                        //     {
+                        //         renderUrl: 'https://cdn.mediago.io/js/test/empty.js'
+                        //     }
+                        // ],
+                        // executionMode: 'group-by-origin'
+                    };
+                    var expiration = 2592000;
+                    navigator.joinAdInterestGroup(ig, expiration);
+                    return true;
+                }
+            }
+
+            /**
+             * &#65533;룟룚&#65533;닺땃瀯&#65533;
+             */
+            function getAuctionResult() {
+                // &#65533;귝빊鰲ｉ뇢竊쉎ttps://developer.chrome.com/docs/privacy-sandbox/fledge-api/ad-auction/
+                if (navigator.runAdAuction) {
+                    const auctionConfig = {
+                        seller: 'https://cdn.mediago.io',
+                        decisionLogicUrl: 'https://cdn.mediago.io',
+                        interestGroupBuyers: ['https://cdn.mediago.io']
+                    };
+                    const auctionResultPromise = navigator.runAdAuction(auctionConfig);
+                    return auctionResultPromise;
+                } else {
+                    return false;
+                }
+
+                // return auctionResultPromise.then(function (res) {
+                //     console.log('getAuctionResult res', res);
+                //     // todo report AuctionResult
+                // });
+            }
+        </script>
+        <script style="user-select: auto !important;">
+            async function init() {
+                // 瀯묈츣 cdn.mediago.io token
+                addOriginTrialMeta(
+                    'A0MT6XNKno63xkeDj6OjNq5NfeqgZgHBcH8VpgA7Ks8c1caAHFox2Bia19pl04nCAkIaWzb1oD6cfcDMuyBvrAgAAACEeyJvcmlnaW4iOiJodHRwczovL2Nkbi5tZWRpYWdvLmlvOjQ0MyIsImZlYXR1cmUiOiJQcml2YWN5U2FuZGJveEFkc0FQSXMiLCJleHBpcnkiOjE2OTUxNjc5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9'
+                );
+                // 瀯묈츣 mediago.io token
+                addOriginTrialMeta(
+                    'A7J/zKtS7Hsph6itQaA2r5SBTtC3uc4oScABQLufiLlqEQWr5O3/iQf3BLnF6J/UtumeRg8NEmHCu2wd7Tkt4AcAAACAeyJvcmlnaW4iOiJodHRwczovL21lZGlhZ28uaW86NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY5NTE2Nzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0='
+                );
+                const joinIGUsable = joinAdInterestGroup();
+                const actionPromise = getAuctionResult();
+                var actionApiRes = null;
+                if (actionPromise) {
+                    actionApiRes = await actionPromise;
+                }
+                const topicsPromise = getTopicsInfo();
+                const topic = topicsPromise ? await topicsPromise : [];
+
+                const dtn = 'f9f2b1ef23fe2759c2cad0953029a94b';
+
+                trackPrivacySandbox(dtn, {
+                    name: 'PRIVACY_SANDBOX',
+                    joinIGUsable,
+                    actionApiUsable: Boolean(actionPromise),
+                    actionApiRes,
+                    topicsUsebale: Boolean(topicsPromise),
+                    topics: JSON.stringify(topic)
+                });
+            }
+            try {
+                init();
+            } catch (err) {}
+        </script>
+    
+
+</body></html>
